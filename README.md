@@ -6,7 +6,6 @@ European Hotel Review Analysis
 
 ### Reason why they selected their topic
 
-
 ### Description of their source of data
 This dataset contains 515,000 customer reviews and scoring of 1493 luxury hotels across Europe. The geographical location of hotels are also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
 
@@ -32,5 +31,7 @@ The csv file contains 17 fields. The description of each field is as below:
 
 [Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
 
-✓ Questions they hope to answer with the 
+## Questions they hope to answer with the 
+
+
 
