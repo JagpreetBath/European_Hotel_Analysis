@@ -11,6 +11,8 @@ Based on previous class deliverables and group research done by the project team
 ### Description of their source of data
 This dataset contains 515,000 customer reviews and a scoring of 1493 luxury hotels across Europe. The geographical location of hotels is also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
 
+[Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
+
 #### Data Content
 The CSV file contains 17 fields. The description of each field is as below:
 - Hotel_Address: Address of the hotel.
@@ -30,8 +32,6 @@ The CSV file contains 17 fields. The description of each field is as below:
 - AdditionalNumberof_Scoring: There are also some guests who just made scoring on the service rather than a review. This number indicates how many valid scores without review in there.
 - lat: Latitude of the hotel
 - lng: longitude of the hotel
-
-[Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
 
 ### Questions we are trying answer/ What are we trying to learn
 
