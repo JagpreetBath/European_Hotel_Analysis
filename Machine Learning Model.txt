@@ -1,18 +1,14 @@
 # Provisional Machine Learning Model Outline
 
 ## Overview
-Using our dataset Hotel_Reviews.csv, we will combine the positive and negative hotel reviews from the dataset into a single column.  
-Then, using the our selected machine learning model we will predict if the review is a positive or negative review.  Supervised machine learning
-will allow us to set a score to each hotel review. Finally, we will then compare our determined score to the original 
-score given by the reviewer on the Hotel_Reviews.csv.
+Using our dataset Hotel_Reviews.csv, we will first be putting our selected data into a postgres database that we will then incorporate into our machine learning models.  This process will combine the positive and negative hotel reviews from the selected data into a single column.  Using the our machine learning models, we will predict if the review is a positive or negative review.
 
-## Machine Learning Model Choice (NLP, Linear Regression) - Supervised Learning
-Using NLP (Natural Language Processing) to recalculate/predict the rating.  
-More specifically, we will use Sentiment Analysis to determine if the text is positive, negative or neutral.
-We can come up with a score that will show how postive or negative the text is using NLP.
+## Machine Learning Model Choice (NLP) - Supervised Learning
+Using NLP (Natural Language Processing) to translate text reviews into useable data in our model.
+The specific NLP analysis examined will be a Sentiment Analysis which determines if the text is positive, negative or neutral.
 
-## Which Data will is in our dataset and which data from that dataset will we use in our model?
-The dataset we are using is called Hotel_Reviews.csv.  The data inside the dataset/csv file is listed below.
+## Which Data is in our dataset and which data from that dataset will we use in our model?
+The downloaded dataset is called Hotel_Reviews.csv.  The data inside the dataset/csv file is listed below.
 
 - Hotel_Address: Address of hotel.
 - Review_Date: Date when reviewer posted the corresponding review.
@@ -31,10 +27,8 @@ The dataset we are using is called Hotel_Reviews.csv.  The data inside the datas
 - AdditionalNumberof_Scoring: There are also some guests who just made a scoring on the service rather than a review. This number indicates how many valid scores without review in there.
 - lat: Latitude of the hotel
 
-## What is the target (thing we want to predict/column we want to predict) we want to use?
+## What is the target (thing we want to predict/column we want to predict) we want to use? - correct output
 The target is our y-variable (dependant variable).  This is column M (Reviewer_Score) in our original Hotel_Reviews.csv dataset.
 
-## Which features (columns we are using to aide in that prediction) will we use?
+## Which features (columns we are using to aide in that prediction) will we use? - correct input
 The feature(s) is our X (independant variable).  This is columns J and G (Negative_Review and Positive_Review) in our original Hotel_Reviews.csv dataset.
-
-
