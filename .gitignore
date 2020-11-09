@@ -130,3 +130,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# GSP data file (227 MB)
+Hotel_Reviews.csv
+hotel_location_for_project.csv
+hotel_reviews_for_project.csv
