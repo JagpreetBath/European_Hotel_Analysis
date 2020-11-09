@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # European Hotel Analysis
 
 ## Project Overview
@@ -43,3 +44,6 @@ Create an interactive map featuring the location of each hotel with popup marker
 
 
 
+=======
+# European_Hotel_Analysis
+>>>>>>> ab37f6ca2bfafb0e77e452a3fb2aa18cc3f27c2d
