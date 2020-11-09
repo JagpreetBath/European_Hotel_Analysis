@@ -41,5 +41,19 @@ The CSV file contains 17 fields. The description of each field is as below:
 - Count of tokenized positive and negative words used by nationality.
 - Create an interactive map featuring the location of each hotel with popup markers which include the respective details.
 
+## Resources 
+[Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/ERD_Schemas/DB_ERD.png)
 
+[Database Schema](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/ERD_Schemas/DB_Schema.sql)
+
+[Sample Hotel Reviews Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Tables/sample_table_hotel_reviews.csv)
+
+[Sample Hotel Location Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Tables/sample_table_hotel_location.csv)
+
+[PostgreSQL Table (Hotel Location) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Sample_hotel_location.png)
+
+[PostgreSQL Table (Hotel Reviews) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Sample_hotel_reviews.png
+)
+
+[Connection of ML model to the provisional database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning_Prototype/NLP_Numerical_Reviews.ipynb)
 
