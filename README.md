@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # European Hotel Analysis
 
 ## Project Overview
@@ -36,14 +35,11 @@ The CSV file contains 17 fields. The description of each field is as below:
 
 ### Questions we are trying answer/ What are we trying to learn
 
-Train and evaluate various machine learning models to determine which selected machine learning model predicts the review score with the highest accuracy.
-Find the nationality with the top five review count (both highest and lowest). 
-Based on the nationality of the reviewer, is the score positive or negative?
-Count of tokenized positive and negative words used by nationality.
-Create an interactive map featuring the location of each hotel with popup markers which include the respective details.
+- Train and evaluate various machine learning models to determine which selected machine learning model predicts the review score with the highest accuracy.
+- Find the nationality with the top five review count (both highest and lowest). 
+- Based on the nationality of the reviewer, is the score positive or negative?
+- Count of tokenized positive and negative words used by nationality.
+- Create an interactive map featuring the location of each hotel with popup markers which include the respective details.
 
 
 
-=======
-# European_Hotel_Analysis
->>>>>>> ab37f6ca2bfafb0e77e452a3fb2aa18cc3f27c2d
