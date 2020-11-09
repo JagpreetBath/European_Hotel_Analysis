@@ -1,10 +1,12 @@
 # European Hotel Analysis
 
 ## Project Overview
-### Selected topic
-European Hotel Review Analysis
 
-### Reason why they selected their topic
+### Selected Topic
+The selected topic for Final Project is a "European Hotel Review Analysis".  The dataset is associated with hotel reviews all over Europe.  The objective of this project is to run various machine learning models to predict review scoring and compare which machine learning model is most accurate, create a database to store the data which will be used in our machine learning and data visualization using tableau and/or D3.js with Web application to create a fully functioning and interactive dashboard.
+
+### Reason why we selected our topic
+Based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skill associated with ETL (Extract, Transfer, and Load), machine learning models, and interactive data visualization dashboards.
 
 ### Description of their source of data
 This dataset contains 515,000 customer reviews and scoring of 1493 luxury hotels across Europe. The geographical location of hotels are also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
@@ -31,7 +33,13 @@ The csv file contains 17 fields. The description of each field is as below:
 
 [Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
 
-## Questions they hope to answer with the 
+### Questions we are trying answer/What are we trying to learn
+
+Train and evaluate various machine learning models to determine which selected machine learning model predicts review score with highest accuracy.
+Find the nationality with the top five review count (both highest and lowest). 
+Based on the nationality of the reviewer, is the score positive or negative?
+Count of tokenized positive and negative words used by nationality.
+Create an interactive map featuring the location of each hotel with popup markers which includes the respective details.
 
 
 

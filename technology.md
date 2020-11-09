@@ -1,12 +1,13 @@
 # Technologies Used
+
 ## Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using PySpark.
 
 ## Database Storage
-PostgreSQL is the database we intend to use.
+PostgreSQL along with Amazon AWS will be used to store data.  Data will be imported into google colab via AWS.
 
 ## Machine Learning
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is ___. Extra ML verbiage here.
+PySpark and Google Colab will be used for NLP machine learning.   
 
 ## Dashboard
-We will also integrate D3.js with Web application to create a fully functioning and interactive dashboard. It will be hosted on GitHub.
+We will also integrate tableau/D3.js with Web application to create a fully functioning and interactive dashboard.  It will be hosted on GitHub.
