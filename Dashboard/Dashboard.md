@@ -17,14 +17,15 @@ Description: Country Dashboard contains charts with hotel location, Avg Review S
 [Link to Dashboard 1](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/Country )
 
 ### Dashboard 2: Hotels by Review Score
-Description: Hotels by Review Score Dashboard contains charts show casing Top 5 Hotels by Avg Review Score per country, Top 5 Hotel Location by Avg Review Score per country, and Top 5 Hotels by Avg Review Score per country overtime. 
+Description: Hotels by Review Score Dashboard contains charts showcasing Top 5 Hotels by Avg Review Score per country, Top 5 Hotel Location by Avg Review Score per country, and Top 5 Hotels by Avg Review Score per country overtime. 
 
 [Link to Dashboard 2](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/HotelsbyReviewScore)
 
 ### Dashborad 3: Reviewer Nationality
-Description: Reviewer Nationality Dashboard contains charts show casing Number of Reviews per Reviewer Nationality, Top 5 Review Nationality per country, Top 5 Review Nationality by % Review Class per country and Review Nationality by Avg Positive Word Count, Avg Negative Word Count per Top 5 Hotels per Country.
+Description: Reviewer Nationality Dashboard contains charts showcasing Number of Reviews per Reviewer Nationality, Top 5 Review Nationality per country, Top 5 Review Nationality by % Review Class per country, and Review Nationality by Avg Positive Word Count, Avg Negative Word Count per Top 5 Hotels per Country.
 
 [Link to Dashboard 3](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/ReviewerNationality)
+
 
 ## Resources 
 [Link to Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/HotelLocationMap)
