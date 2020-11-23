@@ -39,4 +39,4 @@ We found that this model is overfitted for output as positive/negative as the re
 ## We also saved the model so that it can be imported and tested by a user
 [***Google Colab file to test the model***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Testing_the_model_with_user_input.ipynb)
 
-[***Saved Model's .h5 file that needs to be placed at the same level as the Colab file above***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/SavedModel4_NLP_DL_Review_Pos_Neg_Format.h5)
+[***Saved Model's .h5 file that needs to be placed at the same level as the Colab file above***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)

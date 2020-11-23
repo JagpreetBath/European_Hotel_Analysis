@@ -18,7 +18,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 
 1) *NLP (Natural Language Processing) using Pyspark*
     - Platform: Google Colab, Algorithm: NaiveBayes
-     - [Repo link]()
+     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark)
      - Results: This model is fast, and is not overfitted for the review outcomes as negative/positive. It works well when the outcome is in decimals/integers and more than 2 categories
         - For output as decimals: 20.77 %
         - For output as integers: 39.62%
@@ -30,13 +30,13 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 
 2) *NLP (Natural Language Processing) using Deep Learning (2 layers)*
     - Platform: Google Colab, Model: [tf2-preview/gnews-swivel-20dim](https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1)
-    - [Repo link]()
+    - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning)
     - Results: This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show
         - For output as decimals: 0.0 %
         - For output as integers: 0.0 %
         - For output as 3 Categories: 3.10%
         - For output as Positive or Negative: 95.66 %
-    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format)
+    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
 
 ### Supervised ML Learning Algorithms
 
@@ -44,4 +44,6 @@ Supervised learning is the machine learning task of learning a function that map
 
 **Supervised ML Algorithms used in this project**
 
-...Work in Progress (working on Logistic Regression, Random Forest, Easy Ensemble)
+[...Work in Progress](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+
+Working on Logistic Regression, Random Forest, Easy Ensemble
