@@ -1,8 +1,9 @@
-# Natural Language Processing (NLP)
+# Natural Language Processing (NLP) using PySpark
 
 ## Resources
 * Google Colab
 * Libraries - PySpark
+* Algorithm/Model used - NaiveBayes Classifier
 
 ### Initial thoughts and strategy
 * The data has 16 columns and 512,470 rows
@@ -11,9 +12,9 @@
 * The column 'Negative reviews' has many entries as 'No Negative'
 
 ### Strategy
-* Drop 'No Positive' and 'No negative' entries
-* Combining the 2 columns ('Positve Reviews' and 'Negative Reviews' into 1)
-* Dropping all but 2 columns that are required for NLP
+* Dropped 'No Positive' and 'No negative' entries
+* Combined the 2 columns ('Positve Reviews' and 'Negative Reviews' into 1)
+* Dropped all but 2 columns that are required for NLP
 
 ### Step 1: Processing data for Attempt 1
 * Changing 'No Negative' and 'No Positive' entries under 'Negative Review' and 'Positive_Review' to null
@@ -40,7 +41,7 @@
     ```
     hotel_reviews_for_NLP1_float_review_score = base_hotel_reviews_for_NLPs[['Review','Reviewer_Score']]
     ```
-* Format of data for NLP1    
+* Format of data after the changes  
     ![Format_of_data_for_NLP1](images/cleaned_data_using_pandas_for_NLP.png)
 
 
@@ -143,7 +144,7 @@ hotel_reviews = hotel_reviews.drop(columns = 'Reviewer_Score')
 
 ![NLP_4thAttempt_results](images/NLP_4_result.png)
 
-### Step 10: - Running NLP and reading data from AWS RDS
+### Step 10: [***Running NLP: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
 # Next Steps
 The accurancy of the model has been
