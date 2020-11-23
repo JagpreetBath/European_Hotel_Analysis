@@ -36,24 +36,33 @@ The CSV file contains 17 fields. The description of each field is as below:
 ### Questions we are trying answer/ What are we trying to learn
 
 - Train and evaluate various machine learning models to determine which selected machine learning model predicts the review score with the highest accuracy.
-- Find the nationality with the top five review count (both highest and lowest). 
-- Based on the nationality of the reviewer, is the score positive or negative?
-- Count of tokenized positive and negative words used by nationality.
-- Create an interactive map featuring the location of each hotel with popup markers which include the respective details.
+- What are the Top 5 hotels with the highest review score per Country?
+- What % are positive reviews and negative reviews per Country?
+- Overtime - Did the Avg Reviews score of the Country improved or degraded?  
+- Overtime - Did the Avg Reviews score of the Top 5 Hotels per Country improved or degraded?
+- What is the Number of Reviews per Reviewer Nationality?
+- What are the Top 5 Reviewer Nationality per country?
+- What % are positive reviews and negative reviews per Top 5 Reviewer Nationality per Country?
+- Based on the reviewer's nationality - What are the positive and negative Avg words count per Top 5 Hotels per country?
+- What is the recommended hotel per country?
+
 
 ## Resources 
-[Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/ERD_Schemas/DB_ERD.png)
+[Google Slides](https://docs.google.com/presentation/d/18UyDqehfuOY-jSQNCMsIw5Z9MuEUVRClHHr3JhimY5A/edit?usp=sharing)
 
-[Database Schema](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/ERD_Schemas/DB_Schema.sql)
+[Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/HotelLocationMap)
 
-[Sample Hotel Reviews Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Tables/sample_table_hotel_reviews.csv)
+[Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_Schemas/DB_ERD.png)
 
-[Sample Hotel Location Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Tables/sample_table_hotel_location.csv)
+[Database Schema](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_Schemas/DB_Schema.sql)
 
-[PostgreSQL Table (Hotel Location) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Sample_hotel_location.png)
+[Sample Hotel Reviews Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataFiles/TransformedData/tables/sample_of_hotel_reviews.zip)
 
-[PostgreSQL Table (Hotel Reviews) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/database_design/Sample_hotel_reviews.png
-)
+[Sample Hotel Location Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataFiles/TransformedData/tables/sample_of_hotel_location.zip)
+
+[PostgreSQL Table (Hotel Location) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/Sample_hotel_location.png)
+
+[PostgreSQL Table (Hotel Reviews) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/Sample_hotel_reviews.png)
 
 [Connection of ML model to the provisional database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning_Prototype/NLP_Numerical_Reviews.ipynb)
 
