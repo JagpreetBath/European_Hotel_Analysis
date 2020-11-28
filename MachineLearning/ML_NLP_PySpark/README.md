@@ -5,6 +5,13 @@
 * Libraries - PySpark
 * Algorithm/Model used - NaiveBayes Classifier
 
+## Objective
+Analysts live by the saying 'the devil is in the details'. They would absolutely love a review score to be as detailed as possible - knowing if a score is 7.5, 8.5, or 9.5 is way better than knowing that a review is simply 'positive.
+
+A very detailed review score, however, can pose a big challange in front of a Machine Leaning engineer, who wants to create a model to predict review score using review text as input. No ML engineer would want to show that their model has a very low accuracy - to increase the accuracy, he might want less number of possible outcomes.
+
+The objective of this analysis is to find a middle ground between the loss of detail and accuracy of the model in predecting the outcome.
+
 ### Initial thoughts and strategy
 * The data has 16 columns and 512,470 rows
 * There are 2 different columns for reviews: 'Positive reviews' and 'Negative Reviews'
@@ -178,7 +185,12 @@ hotel_reviews = hotel_reviews.drop(columns = 'Reviewer_Score')
 The accurancy of the model has been
 - For output as decimals: 20.77 %
 - For output as integers: 39.62%
+- For output as 5-star ratings: 61.27%
 - For output as 3 Categories: 77.63%
 - For output as Positive or Negative: 91.56%
 
-We will next use Neural Networks and Deep Learning to find if we can increase the accuracy.
+# Suggestion
+We would suggest that the company move to having the review score as 3 categories (good, bad, average) because these categories are easy to understand and the accuracy of the PySpark model in preiecting the 3-review outcome is fairly good.
+
+# Next Steps
+We will next use Neural Networks and Deep Learning to find if we can increase the accuracy at predicting the review outcome.
