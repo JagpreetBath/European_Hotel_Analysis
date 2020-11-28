@@ -82,15 +82,42 @@ hotel_reviews['Reviewer_Score'] = hotel_reviews['Reviewer_Score'].astype(np.int6
 ### Next Steps ...
 * The accuracy of the algorithm in predicting the output was 39.62% (better than 20.77%), but still bad
 * The reason behind this was that around 11 possibilities for reviewer_scores (0 to 10)
+* We will convert the the values in the column 'Reviewer_Score' to 5 star rating: 1 to 5
+    - Star Rating 1: Integer Scores 0-2
+    - Star Rating 2: Integer Scores 3-4
+    - Star Rating 3: Integer Scores 5-6
+    - Star Rating 4: Integer Scores 7-8
+    - Star Rating 5: Integer Scores 9-10
+
+
+### Step 6: Processing data for Attempt 3
+* Converting values into Categories
+```
+otel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] <= 2), 'Star_Rating'] = '1'
+hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 9), 'Star_Rating'] = '5'
+hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 3) & (hotel_reviews['Reviewer_Score_Int'] <= 4), 'Star_Rating'] = '2'
+hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 5) & (hotel_reviews['Reviewer_Score_Int'] <= 6), 'Star_Rating'] = '3'
+hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 7) & (hotel_reviews['Reviewer_Score_Int'] <= 8), 'Star_Rating'] = '4'
+```
+* Format of data for NLP3
+![Format_of_data_for_NLP2a](images/Format_of_data_for_NLP2.png)
+
+### Step 7: Running NLP (3rd Attempt) and observing results
+
+![NLP_3rd_Attempt_results](images/NLP_2a_result.png)
+
+### Next Steps ...
+
+* The accuracy of the algorithm in predicting the output was 61.27% (better than 39.62%), but still bad
+* The reason behind this was that around 6 possibilities for reviewer_scores (0 to 5)
 * We will convert the values in the column 'Reviewer_Score' to 3 categories - Bad, Average, and Good
     * Category 1: "Bad" - Score <= 4
     * Category 2: "Average" - Score 5-7
     * Category 3: "Good" - Score >= 8
 
+### Step 8: Processing data for Attempt 4
 
-### Step 6: Processing data for Attempt 3
-
-* Converting values into Categories
+* Converting values into 3 Categories
 
 ```
 hotel_reviews.loc[(hotel_reviews['Reviewer_Score'] <= 4), 'Review_Category'] = 'Bad'
@@ -108,7 +135,7 @@ hotel_reviews = hotel_reviews.drop(columns ='Reviewer_Score')
 
     ![Format_of_data_for_NLP3](images/Format_of_data_for_NLP3.png)
 
-### Step 7: Running NLP (3rd Attempt) and observing results
+### Step 9: Running NLP (4th Attempt) and observing results
 
 ![NLP_3rdAttempt_results](images/NLP_3_result.png)
 
@@ -117,7 +144,7 @@ hotel_reviews = hotel_reviews.drop(columns ='Reviewer_Score')
 * We will narrow down to 2 categories - positive and negative, and create a new column `Reviewer_sentiment`
 
 
-### Step 8: Processing data for Attempt 4
+### Step 10: Processing data for Attempt 5
 
 
 * Creating a new column: 'Reviewer_Sentiment' - values 'positive' and 'negative'
@@ -140,11 +167,11 @@ hotel_reviews = hotel_reviews.drop(columns = 'Reviewer_Score')
 
     ![Format_of_data_for_NLP4](images/Format_of_data_for_NLP4.png)
 
-### Step 9: Running NLP (4th Attempt) and observing results
+### Step 11: Running NLP (5th Attempt) and observing results
 
 ![NLP_4thAttempt_results](images/NLP_4_result.png)
 
-### Step 10: [***Running NLP: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
+### Step 12: [***Running NLP: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
 # Next Steps
 The accurancy of the model has been
