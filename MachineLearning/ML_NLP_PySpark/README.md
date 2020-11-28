@@ -93,14 +93,15 @@ hotel_reviews['Reviewer_Score'] = hotel_reviews['Reviewer_Score'].astype(np.int6
 ### Step 6: Processing data for Attempt 3
 * Converting values into Categories
 ```
-otel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] <= 2), 'Star_Rating'] = '1'
+hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] <= 2), 'Star_Rating'] = '1'
 hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 9), 'Star_Rating'] = '5'
 hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 3) & (hotel_reviews['Reviewer_Score_Int'] <= 4), 'Star_Rating'] = '2'
 hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 5) & (hotel_reviews['Reviewer_Score_Int'] <= 6), 'Star_Rating'] = '3'
 hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 7) & (hotel_reviews['Reviewer_Score_Int'] <= 8), 'Star_Rating'] = '4'
 ```
 * Format of data for NLP3
-![Format_of_data_for_NLP2a](images/Format_of_data_for_NLP2.png)
+
+    ![Format_of_data_for_NLP3](images/Format_of_data_for_NLP3.png)
 
 ### Step 7: Running NLP (3rd Attempt) and observing results
 
