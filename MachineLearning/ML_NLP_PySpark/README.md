@@ -141,7 +141,7 @@ hotel_reviews = hotel_reviews.drop(columns ='Reviewer_Score')
 
 * Format of data for NLP3
 
-    ![Format_of_data_for_NLP3](images/Format_of_data_for_NLP3.png)
+    ![Format_of_data_for_NLP2a](images/Format_of_data_for_NLP2a.png)
 
 ### Step 9: Running NLP (4th Attempt) and observing results
 
