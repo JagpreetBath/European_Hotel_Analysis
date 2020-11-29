@@ -9,8 +9,6 @@ The purpose of using Machine Learning in our project was to test various ML Algo
 1) Find the accuracy in predicting the review score/outcome, and 
 2) Using various pre-processing steps to improve the accuracy.
 
-## Machine Learning Algorithms used in this project
-
 ## Supervised Machine Learning Algorithms
 
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples.In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. (source: [Wikipedia](https://en.wikipedia.org/wiki/Supervised_learning)).
@@ -32,11 +30,11 @@ A common problem in classification algorithms are class imbalances. Class imbala
 - Oversampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning. (source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
     - Native Random Oversampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Result: Balanced Accuracy Score = 0.523
+        - Result: Balanced Accuracy Score = 0.52
 
     - SMOTE Oversampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Balanced Accuracy Score = 0.523
+        - Balanced Accuracy Score = 0.52
     
 - Undersampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning.(source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
     - Random Undersampling
@@ -82,7 +80,6 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
     - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
 
-
 2) *NLP - 2/2: NLP using Deep Learning (2 layers)*
     - Platform: Google Colab, Model: [tf2-preview/gnews-swivel-20dim](https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1)
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning)
@@ -103,3 +100,6 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         6. Enter as many reviews as you want to test
         7. Watch the results!
 
+## Suggestions
+* If the company wants to have the review results in two categories - 'positive' and 'negative', then the best algorithm is ***Logistic Regression*** 
+* If the company wants any further granularity in the review output, then the best algorithm is ***PySpark NLP***
