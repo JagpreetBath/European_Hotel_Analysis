@@ -81,6 +81,7 @@ The Easy Ensemble involves creating balanced samples of the training dataset by 
 Listed below are the precision and the recall/sensitivity scores from the 3 machine learning models:  
 
 1) Logistic Regression
+
 Native Random Oversampling: Precision Average = 0.92, Recall/Sensitivity Average = 0.28
 ![Random Forest Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Oversampling%20Pre%20and%20Rec%20Avg.png)
 
@@ -94,16 +95,19 @@ SMOTEENN Combination: Precision Average = 0.92, Recall/Sensitivity Average = 0.2
 ![Combined Sampling SMOTEENN Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Combined%20Sampling%20SMOTEENN%20Pre%20and%20Rec%20Avg.png)
 
 2) Random Forest Classifier
+
 BalancedRandomForestClassifier: Precision Average = 0.94, Recall/Sensitivity Average = 0.65
 ![Random Forest Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Forest%20Classifier%20Pre%20and%20Rec%20Avg.png)
 
 3) Easy Ensemble Classifier
+
 EasyEnsembleClassifier: Precision Average = 0.93, Recall/Sensitivity Average = 0.56
 ![Easy Ensemble Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Easy%20Ensemble%20Classifier%20Pre%20and%20Rec%20Avg.png)
 
 Listed below are the balanced accuracy scores from the 3 machine learning models:
 
 1) Logistic Regression
+
 Simple Logistic Regression: Balanced Accuracy Score = 0.957
 ![Simple Logistic Regression Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Simple%20Logistic%20Regression%20Accuracy%20Score.png)
 
@@ -120,10 +124,12 @@ SMOTEENN Combination: Balanced Accuracy Score = 0.523
 ![SMOTEENN Combined Sampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTEENN%20Combined%20Sampling%20Accuracy%20Score.png)
 
 2) Random Forest Classifier
+
 BalancedRandomForestClassifier: Balanced Accuracy Score = 0.659
 ![Random Forest Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Forest%20Classifier%20Accuracy%20Score.png)
 
 3) Easy Ensemble Classifier
+
 EasyEnsembleClassifier: Balanced Accuracy Score = 0.599
 ![Easy Ensemble Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Easy%20Ensemble%20Classifier%20Accuracy%20Score.png)
 
