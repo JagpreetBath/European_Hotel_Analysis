@@ -1,12 +1,14 @@
 # Data PreProcessing
 
-Step 1: We first observing the Source file: Hotel_Reviews.csv in a pandas DataFrame, 
+Step 1: Observe the source data - While observing the Source file: Hotel_Reviews.csv in a pandas DataFrame, 
 - We found, it had 515738 rows × 17 columns 
 ![Inital Data File](images/source_data.png)
 - The 17 columns and corresponding data types were
-![Inital Data File](images/source_data_dtypes.png)
+
+    ![Inital Data File](images/source_data_dtypes.png)
 
 Step 2: Since there was no unique column in the table, we used the pandas dataframe index to creae a unique column 'Review_Id' for working with data in PostgreSQL
+
 `hotel_df.index.name='Review_Id`
 
 Step 3: Remove null values
