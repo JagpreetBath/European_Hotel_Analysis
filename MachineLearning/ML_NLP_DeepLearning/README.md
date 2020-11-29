@@ -1,4 +1,5 @@
-# Natural Language Processing (NLP)  - 2/2 - NLP using Deep Learning (2 Layer Neural Network) 
+# Natural Language Processing (NLP)  - 2/2 
+# NLP using Deep Learning (2 Layer Neural Network) 
 
 ## Resources
 * Google Colab
