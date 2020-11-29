@@ -46,4 +46,91 @@ Supervised learning is the machine learning task of learning a function that map
 
 [...Work in Progress](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
 
-Working on Logistic Regression, Random Forest, Easy Ensemble
+### Logistic Regression Algorithms
+
+Logistic Regression is a supervised Machine Learning classification algorithm which is used to predict the probability of a target variable.  The nature of the target or dependent variable is dichotomous, which means there would be only two possible classes.  In other words, the dependent variable is binary in nature having data coded as either 1 (sucess/yes) or 0 (failure/no). 
+
+(source: [Wikipedia](https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_classification_algorithms_logistic_regression.htm))
+
+A common problem in classification algorithms are class imbalances.  Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).  
+
+Strategies to deal with class inbalances include the following:
+
+Oversampling: If one class has too few instances in the training set, we choose more instances from that class until it's larger.  Examples of oversampling include Random Oversampling and SMOTE (Synthetic Minority Oversampling Technique).  SMOTE involves interpolating the minority class while Random Oversampling involves random selection and addition of the minority class.
+
+(source: [Wikipedia](https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-1-oversampling?module_item_id=102452))
+
+Undersampling: Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased.  Examples of oversampling include Random Undersampling and Cluster Centroid Undersampling.  Cluster Centroid Undersampling involves identifying clusters of the majority class and generating synthetic data points while Random Undersampling involves random selection and reduction of the majority class.
+
+(source: [Wikipedia](https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-2-undersampling?module_item_id=102454))
+
+SMOTEENN (SMOTE and Edited Nearest Neighbors) is an algorithm that combines aspects of both oversampling and undersampling.  
+
+### Random Forest and Easy Ensemble Classifier Algorithms
+
+Bagging is an ensemble algorithm that fits multiple models on different subsets of a training dataset, then combines the predictions from all models.
+
+Random forest is an extension of bagging that also randomly selects subsets of features used in each data sample. Both bagging and random forests have proven effective on a wide range of different predictive modeling problems.
+
+The Easy Ensemble involves creating balanced samples of the training dataset by selecting all examples from the minority class and a subset from the majority class.
+
+(source: [Wikipedia](https://machinelearningmastery.com/bagging-and-random-forest-for-imbalanced-classification/))
+
+## Summary of Chosen Machine Learning Models Results
+
+Listed below are the precision and the recall/sensitivity scores from the 3 machine learning models:  
+
+1) Logistic Regression
+Native Random Oversampling: Precision Average = 0.92, Recall/Sensitivity Average = 0.28
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Oversampling.ipynb)
+
+SMOTE Oversampling: Precision Average = 0.92, Recall/Sensitivity Average = 0.28
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_SMOTE_Oversampling.ipynb)
+
+Random Undersampling: Precision Average = 0.92, Recall/Sensitivity Average = 0.28
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Undersampling.ipynb)
+
+SMOTEENN Combination: Precision Average = 0.92, Recall/Sensitivity Average = 0.28
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Combination_Sampling_With_SMOTEEN.ipynb)
+
+2) Random Forest Classifier
+BalancedRandomForestClassifier: Precision Average = 0.94, Recall/Sensitivity Average = 0.65
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb)
+
+3) Easy Ensemble Classifier
+EasyEnsembleClassifier: Precision Average = 0.93, Recall/Sensitivity Average = 0.56
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb)
+
+Listed below are the balanced accuracy scores from the 3 machine learning models:
+
+1) Logistic Regression
+Simple Logistic Regression: Balanced Accuracy Score = 0.957
+[GitHub Pictures]()
+
+Native Random Oversampling: Balanced Accuracy Score = 0.523
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Oversampling.ipynb)
+
+SMOTE Oversampling: Balanced Accuracy Score = 0.523
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_SMOTE_Oversampling.ipynb)
+
+Random Undersampling: Balanced Accuracy Score = 0.523
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Undersampling.ipynb)
+
+SMOTEENN Combination: Balanced Accuracy Score = 0.523
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Combination_Sampling_With_SMOTEEN.ipynb)
+
+2) Random Forest Classifier
+BalancedRandomForestClassifier: Balanced Accuracy Score = 0.659
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb)
+
+3) Easy Ensemble Classifier
+EasyEnsembleClassifier: Balanced Accuracy Score = 0.599
+[GitHub Pictures](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb)
+
+## Summary
+
+To summarize, Logistic Regression, Random Forest, and Easy Ensemble are used to address class imbalance scenarios.  Class imbalance refers to when one class is much larger than another class in a set of data.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones.
+
+When looking only at the Balanced Accuracy Scores (not accounting for the Precision Averages and the Recall/Sensitivity Averages), one can see that the highest score belongs to the Simple Logistic Regression algorithm (0.957).  However, when looking at the Precision Averages (0.94), the Recall/Sensitivity Averages (0.65), as well as the high Balanced Accuracy Score (0.659), we would recommend the (Random Forest Classifier) algorithm to use for predicting positive and negative hotel reviews.
+
+Generally speaking, as we moved from logistic regression algorithms to other algorithms such as Random Forest and Easy Ensemble Classifiers the averages and accuracy scores generally increased.  This is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combining different subsets of the minority and majority data.
