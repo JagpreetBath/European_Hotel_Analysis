@@ -11,25 +11,58 @@ The purpose of using Machine Learning in our project was to test various ML Algo
 
 ## Machine Learning Algorithms used in this project
 
-### Supervised ML Learning Algorithms
+## Supervised Machine Learning Algorithms
 
-Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples.[2] In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. (source - [Wikipedia](https://en.wikipedia.org/wiki/Supervised_learning)).
+Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples.In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. (source: [Wikipedia](https://en.wikipedia.org/wiki/Supervised_learning)).
 
 **Supervised ML Algorithms used in this project**
 
-1) Logistic Regression
-Logistic Regression is a supervised Machine Learning classification algorithm which is used to predict the probability of a target variable. The nature of the target or dependent variable is dichotomous, which means there would be only two possible classes. In other words, the dependent variable is binary in nature having data coded as either 1 (sucess/yes) or 0 (failure/no).
-(source: Wikipedia)
+***1) Logistic Regression***
 
+Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression (or logit regression) is estimating the parameters of a logistic model (a form of binary regression). (source: [Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression))
+
+- Simple Logistic Regression
+    - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+    - Result: Balanced Accuracy Score = 0.96
+
+### Challenges with Logistic Regression
 A common problem in classification algorithms are class imbalances. Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).
 
-Strategies to deal with class inbalances include the following:
-    - 
+**Strategies to deal with class inbalances include the following:**
+- Oversampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning. (source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
+    - Native Random Oversampling
+        - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+        - Result: Balanced Accuracy Score = 0.523
 
+    - SMOTE Oversampling
+        - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+        - Balanced Accuracy Score = 0.523
+    
+- Undersampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning.(source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
+    - Random Undersampling
+        - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+        - Balanced Accuracy Score = 0.52
 
-2) Random Forest and Easy Ensemble Classifier
+- Combination Sampling: These algorithm combines aspects of both,  oversampling and undersampling.
+    - SMOTEENN ((SMOTE and Edited Nearest Neighbors)
+        - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+        - Balanced Accuracy Score = 0.52   - 
 
-### NLP (Natural Language Processing) Algorithms
+***2) Random Forest and Easy Ensemble Classifier***
+
+Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean/average prediction (regression) of the individual trees. (source: [Wikipedia](https://en.wikipedia.org/wiki/Random_forest))
+
+Ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Unlike a statistical ensemble in statistical mechanics, which is usually infinite, a machine learning ensemble consists of only a concrete finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives. (source: [Wikipedia](https://en.wikipedia.org/wiki/Ensemble_learning))
+
+- Random Forest Classifier
+    - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+    - Balanced Accuracy Score = 0.66
+
+- Easy Ensemble Classifier
+    - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+    - Balanced Accuracy Score = 0.60
+
+## NLP (Natural Language Processing) Algorithms
 
 Natural language processing (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data (source: [Wikipedia](https://en.wikipedia.org/wiki/Natural_language_processing) )
 
@@ -38,7 +71,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 1) *NLP - 1/2: NLP using Pyspark*
     - Platform: Google Colab, Algorithm: NaiveBayes
      - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark)
-     - NLP Results:
+     - Accuracy Results:
         - For output as decimals (0.0 to 10.0): 20.77 %
         - For output as integers (0 to 10): 39.62%
         - For output as 5-star ratings (1 to 5): 61.27%
@@ -53,7 +86,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 2) *NLP - 2/2: NLP using Deep Learning (2 layers)*
     - Platform: Google Colab, Model: [tf2-preview/gnews-swivel-20dim](https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1)
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning)
-    - NLP Results:
+    - Accuracy Results:
         - For output as decimals (0.0 to 10.0): 0.0 %
         - For output as integers (0 to 10): 0.0 %
         - For output as 5-star ratings (1 to 5): 0.43 %
