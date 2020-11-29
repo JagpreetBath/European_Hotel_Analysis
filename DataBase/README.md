@@ -95,7 +95,3 @@ Step1: Creating a PostgreSQL DB on AWS
 Step2: Connecting the AWS RDS to local PgAdmin
 
 ![View Combined Table](AWS_RDS/AWS_RDS_PgAdmin_DB_connection_with_local_PgAdmin.png)
-
-
-
-
