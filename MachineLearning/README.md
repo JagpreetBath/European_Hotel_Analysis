@@ -109,28 +109,35 @@ Listed below are the balanced accuracy scores from the 3 machine learning models
 1) Logistic Regression
 
 Simple Logistic Regression: Balanced Accuracy Score = 0.957
+
 ![Simple Logistic Regression Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Simple%20Logistic%20Regression%20Accuracy%20Score.png)
 
 Native Random Oversampling: Balanced Accuracy Score = 0.523
+
 ![Random Oversampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Oversampling%20Accuracy%20Score.png)
 
 SMOTE Oversampling: Balanced Accuracy Score = 0.523
+
 ![SMOTE Oversampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTE%20Oversampling%20Accuracy%20Score.png)
 
 Random Undersampling: Balanced Accuracy Score = 0.523
+
 ![Random Undersampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Undersampling%20Accuracy%20Score.png)
 
 SMOTEENN Combination: Balanced Accuracy Score = 0.523
+
 ![SMOTEENN Combined Sampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTEENN%20Combined%20Sampling%20Accuracy%20Score.png)
 
 2) Random Forest Classifier
 
 BalancedRandomForestClassifier: Balanced Accuracy Score = 0.659
+
 ![Random Forest Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Forest%20Classifier%20Accuracy%20Score.png)
 
 3) Easy Ensemble Classifier
 
 EasyEnsembleClassifier: Balanced Accuracy Score = 0.599
+
 ![Easy Ensemble Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Easy%20Ensemble%20Classifier%20Accuracy%20Score.png)
 
 ## Summary
