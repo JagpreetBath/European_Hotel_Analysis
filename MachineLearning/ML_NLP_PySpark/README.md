@@ -194,4 +194,4 @@ The accurancy of the model has been
 We would suggest that the company move to having the review score as 3 categories (good, bad, average) because these categories are easy for customers to understand and the accuracy of the PySpark model in predicting the 3-review outcome is fairly good.
 
 # Next Steps
-We will next use Neural Networks and Deep Learning to find if we can increase the accuracy at predicting the review outcome.
+We will next use [NLP using Deep Learning](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning) to find if we can increase the accuracy at predicting the review outcome.
