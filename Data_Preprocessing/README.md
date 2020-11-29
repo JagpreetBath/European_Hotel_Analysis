@@ -9,26 +9,28 @@ Step 1: Observe the source data - While observing the Source file: Hotel_Reviews
 
 Step 2: Since there was no unique column in the table, we used the pandas dataframe index to creae a unique column 'Review_Id' for working with data in PostgreSQL
 
-`hotel_df.index.name='Review_Id`
+```
+hotel_df.index.name='Review_Id
+```
 
 Step 3: Remove null values
 - Step 3a: Check for null/na values
 - Step 3b: Drop rows that are na/null and reset the index from 0
 - Step 3c: The operation above will delete the index name, so renaming it again as 'Review_Id'
 - Step 3d: Check for null again
-```
-# check for null/na values
-hotel_df.isnull().sum() 
+    ```
+    # check for null/na values
+    hotel_df.isnull().sum() 
 
-# drop rows that are na/null and reset the index from 0
-hotel_df = hotel_df.dropna().reset_index(drop=True) 
+    # drop rows that are na/null and reset the index from 0
+    hotel_df = hotel_df.dropna().reset_index(drop=True) 
 
-# the operation above will delete the index name, so renaming it again
-hotel_df.index.name='Review_Id'
+    # the operation above will delete the index name, so renaming it again
+    hotel_df.index.name='Review_Id'
 
-# check for null again
-hotel_df.isnull().sum() 
-```
+    # check for null again
+    hotel_df.isnull().sum() 
+    ```
 
 Step 4: We found that, for best project efficiency, the 17 columns could be divided into two groups: 'review group' and 'location group' with the review group having information pertaining to reviews only, and the location group with information pertaining to location only.
 
