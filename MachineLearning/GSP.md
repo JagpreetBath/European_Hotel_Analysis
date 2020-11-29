@@ -44,7 +44,7 @@ A common problem in classification algorithms are class imbalances. Class imbala
 - Combination Sampling: These algorithm combines aspects of both,  oversampling and undersampling.
     - SMOTEENN ((SMOTE and Edited Nearest Neighbors)
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Balanced Accuracy Score = 0.52   - 
+        - Balanced Accuracy Score = 0.52 
 
 ***2) Random Forest and Easy Ensemble Classifier***
 
@@ -70,11 +70,11 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
     - Platform: Google Colab, Algorithm: NaiveBayes
      - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark)
      - Accuracy Results:
-        - For output as decimals (0.0 to 10.0): 20.77 %
-        - For output as integers (0 to 10): 39.62%
-        - For output as 5-star ratings (1 to 5): 61.27%
-        - For output as 3 Categories (Bad, Average, or Good): 77.63%
-        - For output as Sentiment (Positive or Negative): 91.56%
+        - For output as decimals (0.0 to 10.0): 0.21
+        - For output as integers (0 to 10): 0.40
+        - For output as 5-star ratings (1 to 5): 0.61
+        - For output as 3 Categories (Bad, Average, or Good): 0.78
+        - For output as Sentiment (Positive or Negative): 0.92
      - Summary of Results and Recommendation:
      This model is fast, and is not overfitted for the review outcomes as negative/positive. It works well when the outcome is in decimals/integers and more than 2 categories   
     - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
@@ -84,10 +84,10 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
     - Platform: Google Colab, Model: [tf2-preview/gnews-swivel-20dim](https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1)
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning)
     - Accuracy Results:
-        - For output as decimals (0.0 to 10.0): 0.0 %
-        - For output as integers (0 to 10): 0.0 %
-        - For output as 5-star ratings (1 to 5): 0.43 %
-        - For output as 3 Categories (Bad, Average, or Good): 3.10%
+        - For output as decimals (0.0 to 10.0): 0.0
+        - For output as integers (0 to 10): 0.0
+        - For output as 5-star ratings (1 to 5): 0.0043
+        - For output as 3 Categories (Bad, Average, or Good): 0.031
         - For output as Sentiment (Positive or Negative): 95.66 %
     - Summary of Results:  This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show.     
     - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
@@ -101,5 +101,5 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         7. Watch the results!
 
 ## Suggestions
-* If the company wants to have the review results in two categories - 'positive' and 'negative', then the best algorithm is ***Logistic Regression*** 
+* If the company wants to have the review results in two categories - 'positive' and 'negative', then the best algorithm is ***Logistic Regression***, it beats the Deep Learning NLP model by 0.0002 points! 
 * If the company wants any further granularity in the review output, then the best algorithm is ***PySpark NLP***
