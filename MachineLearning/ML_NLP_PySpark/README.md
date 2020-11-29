@@ -181,13 +181,13 @@ hotel_reviews = hotel_reviews.drop(columns = 'Reviewer_Score')
 
 ### Step 12: [***Running NLP: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
-# Next Steps
+# Summary of Results
 The accurancy of the model has been
-- For output as decimals: 20.77 %
-- For output as integers: 39.62%
-- For output as 5-star ratings: 61.27%
-- For output as 3 Categories: 77.63%
-- For output as Positive or Negative: 91.56%
+- For output as decimals (0.0 to 10.0): 20.77 %
+- For output as integers (0 to 10): 39.62%
+- For output as 5-star ratings (1 to 5): 61.27%
+- For output as 3 Categories (Bad, Average, or Good): 77.63%
+- For output as Sentiment (Positive or Negative): 91.56%
 
 # Suggestion
 We would suggest that the company move to having the review score as 3 categories (good, bad, average) because these categories are easy for customers to understand and the accuracy of the PySpark model in predicting the 3-review outcome is fairly good.
