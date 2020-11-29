@@ -54,15 +54,10 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
     - Summary of Results:  This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show.     
     - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
     - Testing the model in real-time
-        1) Open Gooogle colab https://colab.research.google.com/
-        2) Sign in with Google credentials
-        3) [Upload this file on Google Colab](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Realtime_testing_of_DL_NLP_model.ipynb)
-        4) [Place this file at the root of the Colab file above](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/SavedModel5_NLP_DL_Review_Pos_Neg_Format.h5)
-        5) Run the File: Runtime -> Run All
-        6) Enter as many reviews as you want to test
-        7) See the results!
-
-
-[...Work in Progress](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-
-Working on Logistic Regression, Random Forest, Easy Ensemble
+        1. Open Gooogle colab https://colab.research.google.com/
+        2. Sign in with Google credentials
+        3. [Upload this file on Google Colab](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Realtime_testing_of_DL_NLP_model.ipynb)
+        4. [Place this file at the root of the Colab file above](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/SavedModel5_NLP_DL_Review_Pos_Neg_Format.h5)
+        5. Run the File: Runtime -> Run All
+        6. Enter as many reviews as you want to test
+        7. Watch the results!
