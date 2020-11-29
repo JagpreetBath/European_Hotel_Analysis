@@ -66,7 +66,7 @@ Breaking the big table into 2 tables: 1st with hotel reviews, 2nd with hotel loc
     ```
     ![Table 2 - selecting unique hotels](images/Table2b_retaining_only_4_clmns.png)
 
-Step 5) Create sample tables with 1000 rows
+Step 5: Create sample tables with 1000 rows
 - Step 5a: Table 1 - review table - selecting the first 1000 rows
     ```
     # creating a sample of table 2, with 1000 rows
@@ -87,7 +87,7 @@ Step 5) Create sample tables with 1000 rows
     ```
     ![Table 2 - 1000 rows](images/Table2_1000rows.png)
 
-Step 6) Extract city and country using lat and lng, using geopy
+Step 6: Extract city and country using lat and lng, using geopy
 - Step 6a: Create 2 new columns for City and Country
     ```
     # creating 2 new columns
@@ -99,7 +99,7 @@ Step 6) Extract city and country using lat and lng, using geopy
     ```
     ![Table 2 - 2 new clmns](images/Table2_creating2newcolumns.png)
 
-- Step 6b:Install GeoPy
+- Step 6b: Install GeoPy
     ```
     # install the module geopy
     ! pip install geopy
