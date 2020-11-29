@@ -43,12 +43,17 @@
 - For output as 3 Categories (Bad, Average, or Good): 3.10%
 - For output as Sentiment (Positive or Negative): 95.66 %
 
-# Suggestion
+# Suggestions
 We found that this model is overfitted for review output as positive/negative. So if the company wants to predict reviewer sentiments, this is a very good model. It is, however, a big failure for predicting reviews in any other of the 4 formats - the [PySpark NLP](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark) fares much better.
 
-# BONUS
+# Testing the model in real-time 
+1) Open Gooogle colab https://colab.research.google.com/
+2) Sign in with Google credentials
+3) [Upload this file on Google Colab](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Realtime_testing_of_DL_NLP_model.ipynb)
+4) [Place this file at the root of the Colab file above](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/SavedModel5_NLP_DL_Review_Pos_Neg_Format.h5)
+5) Run the File: Runtime -> Run All
+6) Enter as many reviews as you want to test
+7) See the results!
 
-We saved the model so that it can be imported and tested by a user
-[***Google Colab file to test the model***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Testing_the_model_with_user_input.ipynb)
 
-[***Saved Model's .h5 file that needs to be placed at the same level as the Colab file above***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
+
