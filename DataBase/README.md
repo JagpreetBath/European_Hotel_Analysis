@@ -54,6 +54,7 @@ Step 4: View Table 1
 
 
 Step 5: View Table 2
+
 ![View Table 2](PostgresSQL/Sample_hotel_location.png)
 
 Step 6: Join the 2 tables
@@ -88,9 +89,11 @@ Step 7: View the combined table
 ## Part 2: AWS RDS PostgreSQL database
 
 Step1: Creating a PostgreSQL DB on AWS
+
 ![View Combined Table](AWS_RDS/AWS_RDS_DB.png)
 
 Step2: Connecting the AWS RDS to local PgAdmin
+
 ![View Combined Table](AWS_RDS/AWS_RDS_PgAdmin_DB_connection_with_local_PgAdmin.png)
 
 
