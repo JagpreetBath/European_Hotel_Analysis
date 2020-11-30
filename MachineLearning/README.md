@@ -44,6 +44,32 @@ Supervised learning is the machine learning task of learning a function that map
 
 **Supervised ML Algorithms used in this project**
 
-[...Work in Progress](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
+### Logistic Regression Algorithms
 
-Working on Logistic Regression, Random Forest, Easy Ensemble
+Logistic Regression is a supervised Machine Learning classification algorithm which is used to predict the probability of a target variable.  The nature of the target or dependent variable is dichotomous, which means there would be only two possible classes.  In other words, the dependent variable is binary in nature having data coded as either 1 (sucess/yes) or 0 (failure/no). 
+
+(source: [Wikipedia](https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_classification_algorithms_logistic_regression.htm))
+
+A common problem in classification algorithms are class imbalances.  Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).  
+
+Strategies to deal with class inbalances include the following:
+
+Oversampling: If one class has too few instances in the training set, we choose more instances from that class until it's larger.  Examples of oversampling include Random Oversampling and SMOTE (Synthetic Minority Oversampling Technique).  SMOTE involves interpolating the minority class while Random Oversampling involves random selection and addition of the minority class.
+
+(source: [Wikipedia](https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-1-oversampling?module_item_id=102452))
+
+Undersampling: Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased.  Examples of oversampling include Random Undersampling and Cluster Centroid Undersampling.  Cluster Centroid Undersampling involves identifying clusters of the majority class and generating synthetic data points while Random Undersampling involves random selection and reduction of the majority class.
+
+(source: [Wikipedia](https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-2-undersampling?module_item_id=102454))
+
+SMOTEENN (SMOTE and Edited Nearest Neighbors) is an algorithm that combines aspects of both oversampling and undersampling.  
+
+### Random Forest and Easy Ensemble Classifier Algorithms
+
+Bagging is an ensemble algorithm that fits multiple models on different subsets of a training dataset, then combines the predictions from all models.
+
+Random forest is an extension of bagging that also randomly selects subsets of features used in each data sample. Both bagging and random forests have proven effective on a wide range of different predictive modeling problems.
+
+The Easy Ensemble involves creating balanced samples of the training dataset by selecting all examples from the minority class and a subset from the majority class.
+
+(source: [Wikipedia](https://machinelearningmastery.com/bagging-and-random-forest-for-imbalanced-classification/))
