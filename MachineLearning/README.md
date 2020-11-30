@@ -44,8 +44,6 @@ Supervised learning is the machine learning task of learning a function that map
 
 **Supervised ML Algorithms used in this project**
 
-[...Work in Progress](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-
 ### Logistic Regression Algorithms
 
 Logistic Regression is a supervised Machine Learning classification algorithm which is used to predict the probability of a target variable.  The nature of the target or dependent variable is dichotomous, which means there would be only two possible classes.  In other words, the dependent variable is binary in nature having data coded as either 1 (sucess/yes) or 0 (failure/no). 
@@ -75,75 +73,3 @@ Random forest is an extension of bagging that also randomly selects subsets of f
 The Easy Ensemble involves creating balanced samples of the training dataset by selecting all examples from the minority class and a subset from the majority class.
 
 (source: [Wikipedia](https://machinelearningmastery.com/bagging-and-random-forest-for-imbalanced-classification/))
-
-## Summary of Chosen Machine Learning Models Results
-
-Listed below are the precision and the recall/sensitivity scores from the 3 machine learning models:  
-
-1) Logistic Regression
-
-Native Random Oversampling: Precision Average = 0.95, Recall/Sensitivity Average = 0.78
-![Random Forest Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Oversampling%20Pre%20and%20Rec%20Avg.png)
-
-SMOTE Oversampling: Precision Average = 0.95, Recall/Sensitivity Average = 0.78
-![SMOTE Oversampling Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTE%20Oversampling%20Pre%20and%20Rec%20Avg.png)
-
-Random Undersampling: Precision Average = 0.95, Recall/Sensitivity Average = 0.78
-![Random Undersampling Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Undersampling%20Pre%20and%20Rec%20Avg.png)
-
-SMOTEENN Combination: Precision Average = 0.95, Recall/Sensitivity Average = 0.77
-![Combined Sampling SMOTEENN Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Combined%20Sampling%20SMOTEENN%20Pre%20and%20Rec%20Avg.png)
-
-2) Random Forest Classifier
-
-BalancedRandomForestClassifier: Precision Average = 0.95, Recall/Sensitivity Average = 0.77
-![Random Forest Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Forest%20Classifier%20Pre%20and%20Rec%20Avg.png)
-
-3) Easy Ensemble Classifier
-
-EasyEnsembleClassifier: Precision Average = 0.95, Recall/Sensitivity Average = 0.79
-![Easy Ensemble Classifier Pre and Rec Avg.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Easy%20Ensemble%20Classifier%20Pre%20and%20Rec%20Avg.png)
-
-Listed below are the balanced accuracy scores from the 3 machine learning models:
-
-1) Logistic Regression
-
-Simple Logistic Regression: Balanced Accuracy Score = 0.957
-
-![Simple Logistic Regression Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Simple%20Logistic%20Regression%20Accuracy%20Score.png)
-
-Native Random Oversampling: Balanced Accuracy Score = 0.770
-
-![Random Oversampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Oversampling%20Accuracy%20Score.png)
-
-SMOTE Oversampling: Balanced Accuracy Score = 0.769
-
-![SMOTE Oversampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTE%20Oversampling%20Accuracy%20Score.png)
-
-Random Undersampling: Balanced Accuracy Score = 0.770
-
-![Random Undersampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Undersampling%20Accuracy%20Score.png)
-
-SMOTEENN Combination: Balanced Accuracy Score = 0.773
-
-![SMOTEENN Combined Sampling Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/SMOTEENN%20Combined%20Sampling%20Accuracy%20Score.png)
-
-2) Random Forest Classifier
-
-BalancedRandomForestClassifier: Balanced Accuracy Score = 0.787
-
-![Random Forest Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Random%20Forest%20Classifier%20Accuracy%20Score.png)
-
-3) Easy Ensemble Classifier
-
-EasyEnsembleClassifier: Balanced Accuracy Score = 0.795
-
-![Easy Ensemble Classifier Accuracy Score.png](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/Analysis_Segment_3_Ashok/MachineLearning/ML_Supervised/ML_Supervised%20Pictures/Easy%20Ensemble%20Classifier%20Accuracy%20Score.png)
-
-## Summary
-
-To summarize, Logistic Regression, Random Forest, and Easy Ensemble are used to address class imbalance scenarios.  Class imbalance refers to when one class is much larger than another class in a set of data.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones.
-
-When looking only at the Balanced Accuracy Scores (not accounting for the Precision Averages and the Recall/Sensitivity Averages), one can see that the highest score belongs to the Simple Logistic Regression algorithm (0.957).  However, when looking at the Precision Averages (0.95), the Recall/Sensitivity Averages (0.79), as well as the high Balanced Accuracy Score (0.795), we would recommend the (Easy Ensemble Classifier) algorithm to use for predicting positive and negative hotel reviews.
-
-Generally speaking, as we moved from logistic regression algorithms to other algorithms such as Random Forest and Easy Ensemble Classifiers the averages and accuracy scores generally increased.  This is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combining different subsets of the minority and majority data.
