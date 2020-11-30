@@ -55,5 +55,8 @@ We found that this model is overfitted for review output as positive/negative. S
 6) Enter as many reviews as you want to test
 7) See the results!
 
+    ***Sample result***
+    
+    ![Sample Result](images/sample_output_real-time_test.png)
 
 

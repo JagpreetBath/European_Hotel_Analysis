@@ -21,7 +21,7 @@ Logistic regression is a statistical model that in its basic form uses a logisti
 
 - Simple Logistic Regression
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-    - Result: Balanced Accuracy Score = 0.96
+    - Result: Balanced Accuracy Score = 0.957
 
 ### Challenges with Logistic Regression
 A common problem in classification algorithms are class imbalances. Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).
@@ -30,21 +30,21 @@ A common problem in classification algorithms are class imbalances. Class imbala
 - Oversampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning. (source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
     - Native Random Oversampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Result: Balanced Accuracy Score = 0.52
+        - Result: Balanced Accuracy Score = 0.770
 
     - SMOTE Oversampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Balanced Accuracy Score = 0.52
+        - Balanced Accuracy Score = 0.769
     
 - Undersampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning.(source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
     - Random Undersampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Balanced Accuracy Score = 0.52
+        - Balanced Accuracy Score = 0.770
 
 - Combination Sampling: These algorithm combines aspects of both,  oversampling and undersampling.
     - SMOTEENN ((SMOTE and Edited Nearest Neighbors)
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Balanced Accuracy Score = 0.52 
+        - Balanced Accuracy Score = 0.773
 
 ***2) Random Forest and Easy Ensemble Classifier***
 
@@ -54,11 +54,11 @@ Ensemble methods use multiple learning algorithms to obtain better predictive pe
 
 - Random Forest Classifier
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-    - Balanced Accuracy Score = 0.66
+    - Balanced Accuracy Score = 0.787
 
 - Easy Ensemble Classifier
     - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-    - Balanced Accuracy Score = 0.60
+    - Balanced Accuracy Score = 0.795
 
 ## NLP (Natural Language Processing) Algorithms
 
@@ -101,5 +101,5 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         7. Watch the results!
 
 ## Suggestions
-* If the company wants to have the review results in two categories - 'positive' and 'negative', then the best algorithm is ***Logistic Regression***, it beats the Deep Learning NLP model by 0.0002 points! 
-* If the company wants any further granularity in the review output, then the best algorithm is ***PySpark NLP***
+* If the company wants to have the review results in two categories - 'positive' and 'negative', then the algorithm with the best accuracy in predicting results is ***Logistic Regression***.
+* If the company wants any further granularity in the review output, then the algorithm with the best accuracy in predicting results is ***PySpark NLP***
