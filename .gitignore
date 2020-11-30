@@ -1,6 +1,7 @@
 #Data file 
 Hotel_Reviews.csv
-MachineLearning/Machine_Learning_Ashok/hotel_combined.csv
+MachineLearning/ML_Supervised/hotel_combined.csv
+MachineLearning/ML_Unsupervised/hotel_combined.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
