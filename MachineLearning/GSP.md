@@ -88,7 +88,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         - For output as integers (0 to 10): 0.0
         - For output as 5-star ratings (1 to 5): 0.0043
         - For output as 3 Categories (Bad, Average, or Good): 0.031
-        - For output as Sentiment (Positive or Negative): 95.66 %
+        - For output as Sentiment (Positive or Negative): 0.957
     - Summary of Results:  This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show.     
     - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
     - Testing the model in real-time
@@ -100,6 +100,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         6. Enter as many reviews as you want to test
         7. Watch the results!
 
-## Suggestions
-* If the company wants to have the review results in two categories - 'positive' and 'negative', then the algorithm with the best accuracy in predicting results is ***Logistic Regression***.
-* If the company wants any further granularity in the review output, then the algorithm with the best accuracy in predicting results is ***PySpark NLP***
+## Recommendations
+* If the company wants to have the review results in two categories - 'positive' and 'negative', then ***Logistic Regression*** and ***Deep Learning NLP*** are recommended - both have an accuracy score of 0.957.
+* If the company wants any further granularity in the review output, then ***PySpark NLP*** is recommended.
+* If a balance between granurality and accuracy is desired, then the 3 categories (good, bad, average) review output is suggested. These categories are easy for customers to understand. ***PySpark NLP*** is recommended as the model - it gives an accuracy score of 0.786.
