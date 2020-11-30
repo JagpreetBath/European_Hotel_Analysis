@@ -48,6 +48,8 @@ The CSV file contains 17 fields. The description of each field is as below:
 
 
 ## Resources 
+[Website (Work in progress...)](https://jagpreetbath.github.io/European_Hotel_Analysis/index.html)
+
 [Google Slides](https://docs.google.com/presentation/d/18UyDqehfuOY-jSQNCMsIw5Z9MuEUVRClHHr3JhimY5A/edit?usp=sharing)
 
 [Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/HotelLocationMap)
