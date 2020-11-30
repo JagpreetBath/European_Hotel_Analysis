@@ -43,7 +43,7 @@
 - For output as 3 Categories (Bad, Average, or Good): 3.10%
 - For output as Sentiment (Positive or Negative): 95.66 %
 
-# Suggestions
+# Recommendations
 We found that this model is overfitted for review output as positive/negative. So if the company wants to predict reviewer sentiments, this is a very good model. It is, however, a big failure for predicting reviews in any other of the 4 formats - the [PySpark NLP](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark) fares much better.
 
 # Testing the model in real-time 

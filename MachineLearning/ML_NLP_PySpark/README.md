@@ -190,7 +190,7 @@ The accurancy of the model has been
 - For output as 3 Categories (Bad, Average, or Good): 77.63%
 - For output as Sentiment (Positive or Negative): 91.56%
 
-# Suggestion
+# Recommendations
 We would suggest that the company move to having the review score as 3 categories (good, bad, average) because these categories are easy for customers to understand and the accuracy of the PySpark model in predicting the 3-review outcome is fairly good.
 
 # Next Steps
