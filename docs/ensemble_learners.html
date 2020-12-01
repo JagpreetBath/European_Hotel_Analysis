@@ -173,11 +173,41 @@
             </div>
           </div>
         </div> 
+        <div class="row" >
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h2> Overview </h2>
+                <p> Ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Unlike a statistical ensemble in statistical mechanics, which is usually infinite, a machine learning ensemble consists of only a concrete finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives. </p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Ensemble_learning" target="_blank"> Wikipedia</a></p>
+                <p> Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean/average prediction (regression) of the individual trees.</p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Random_forest" target="_blank"> Wikipedia</a></p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="row" >
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h2> Ensemble Learners Strategies/Results </h2>
+                <p> Random Forest Classifier: </p>
+                <p> Balanced Accuracy Score = 0.787 </p>
+                <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></p>
+                <p> Easy Ensemble Classifier: </p>
+                <p> Balanced Accuracy Score = 0.795 </p>
+                <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></p>
+              </div>
+          </div>
+        </div> 
         <div class="row">
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3>Place info Here...</h3>
+                <h3> Ensemble Learners Summary/Recommendations </h3>
+                <p> To summarize, Logistic Regression, Random Forest, and Easy Ensemble are used to address class imbalance scenarios.  Class imbalance refers to when one class is much larger than another class in a set of data.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones. </p>
+                <p> When looking only at the Balanced Accuracy Scores (not accounting for the Precision Averages and the Recall/Sensitivity Averages), one can see that the highest score belongs to the Simple Logistic Regression algorithm (0.957).  However, when looking at the Precision Averages (0.95), the Recall/Sensitivity Averages (0.79), as well as the high Balanced Accuracy Score (0.795), we would recommend the (Easy Ensemble Classifier) algorithm to use for predicting positive and negative hotel reviews. </p>
+                <p> Generally speaking, as we moved from logistic regression algorithms to other algorithms such as Random Forest and Easy Ensemble Classifiers the averages and accuracy scores generally increased.  This is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combining different subsets of the minority and majority data. </p>
               </div>
             </div>
           </div>
