@@ -143,10 +143,10 @@
               <div class="card-header ">
                 <h4> Step 1: Observe the source data - While observing the Source file: Hotel_Reviews.csv in a pandas DataFrame </h4>
                 <ul>
-                  <li>Data contains 515738 rows × 17 columns</li>
-                  <ul><li>Link Image</li></ul>
-                  <li>The 17 columns and corresponding data types were</li>
-                  <ul><li>Link Image</li></ul>
+                  <li>Data contains 515738 rows × 17 columns</li><br>
+                  <ul><img src="assets/img/source_data.png" alt="source_data"></ul><br>
+                  <li>The 17 columns and corresponding data types were</li><br>
+                  <ul><img src="assets/img/source_data_dtypes.png" alt="source_data_dtypes"></ul>
                 </ul>
 
                 <h4> Step 2: Since there was no unique column in the table, we used the pandas dataframe index to creae a unique column 'Review_Id' for working with data in PostgreSQL </h4>
@@ -181,7 +181,8 @@
                     hotel_reviews = hotel_df.drop(columns=['lat','lng'])<br><br>
                     #view the table <br>
                     hotel_reviews
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table1_review.png" alt="Table1_review"></ul>
                 </ul>
                 <ul>
                   <h5>Step 4.2: Create Table 2: DF with locations (no reviews)</h5>
@@ -191,7 +192,8 @@
                 
                     # view the table<br>
                     unique_address_df
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table2_selecting_unique_hotels.png" alt="Table2_selecting_unique_hotels"></ul>
                 </ul>
                 <ul>
                   <h5>Step 4.3: Select only 4 columns that we want - "Hotel_Address", "Hotel_Name", "lat", "lng"</h5>
@@ -201,10 +203,11 @@
                 
                     #view the table<br>
                     hotel_location
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table2b_retaining_only_4_clmns.png" alt="Table2b_retaining_only_4_clmns"></ul>
                 </ul>
  
-                <h4>Step 5Create sample tables with 1000 rows</h4>
+                <h4>Step 5: Create sample tables with 1000 rows</h4>
                 <ul>
                   <h5>Step 5.1: Table 1: review table - selecting the first 1000 rows</h5>
                   <ul><code> 
@@ -213,7 +216,8 @@
                 
                     # view the table<br>
                     sample_of_hotel_location<br>
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table1_1000rows.png" alt="Table1_1000rows"></ul>
                 </ul>
                 <ul>
                   <h5>Step 5.2: Table 2: location table - selecting the first 1000 rows</h5>
@@ -223,7 +227,8 @@
                 
                     # view the table<br>
                     sample_of_hotel_reviews
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table2_1000rows.png" alt="Table2_1000rows"></ul>
                 </ul>
               
                 <h4>Step 6: Extract city and country using lat and lng, using geopy</h4>
@@ -236,7 +241,8 @@
                 
                     # view the df<br>
                     hotel_location_city_country
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table2_creating2newcolumns.png" alt="Table2_creating2newcolumns"></ul>
                 </ul>
                 <ul>
                   <h5>Step 6.2: Install GeoPy</h5>
@@ -280,7 +286,8 @@
                     </ul>
                     # view the df<br> 
                     hotel_location_city_country
-                  </code></ul>
+                  </code></ul><br>
+                  <ul><img src="assets/img/Table2_with_city_country.png" alt="Table2_with_city_country"></ul>
                 </ul>
               </div>
             </div>
@@ -290,7 +297,9 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h1>Next Step </h1>
+                <h3>Next Step </h3>
+                <p>At the end of each ipynb file, the new tables were stored in Zip files. </p>
+                <p>The next step would be <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/DataBase" target="_blank">Storing the tables in Database</a></p>
               </div>
             </div>
           </div>
