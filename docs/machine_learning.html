@@ -147,11 +147,6 @@
                 </button>
               </div>
               <div class="col-md-4">
-                <button type="button" class="btn btn-block" onclick="location.href='./k_means.html'" role="button">
-                  K-means
-                </button>
-              </div>
-              <div class="col-md-4">
                 <button type="button" class="btn btn-block" onclick="location.href='./pyspark_nlp.html'" role="button">
                   PySpark NLP
                 </button>
@@ -161,6 +156,11 @@
                   Deep Learning NLP
                 </button>
               </div>
+              <div class="col-md-4">
+                <button type="button" class="btn btn-block" onclick="location.href='./the_future.html'" role="button">
+                  The Future...
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h1> Machine Learning Overview</h1>
+                <h1> Machine Learning</h1>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h2>Overview of Machine Learning</h2>
+                <h2>Overview </h2>
                 <p>Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so.Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks.</p>
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank"> Wikipedia</a></p>
               </div>
@@ -207,7 +207,7 @@
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank"> Wikipedia</a></p>
 
                 <h3>Supervised ML Algorithms used in this project</h3>
-                <h4>Logistic Regression</h4>
+                <h3>1. Logistic Regression</h3>
                 <p>Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression (or logit regression) is estimating the parameters of a logistic model (a form of binary regression).</p>
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Logistic_regression" target="_blank"> Wikipedia</a></p>
 
@@ -219,13 +219,65 @@
                   </li>
                 </ul>
 
-                <h3>Challenges with Logistic Regression</h3>
+                <h4>Challenges with Logistic Regression</h4>
                 <p>A common problem in classification algorithms are class imbalances. Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).</p>
 
                 <h3>Strategies to deal with class inbalances include the following:</h3>
                 <p>Oversampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning. </p>
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank"> Wikipedia</a></p>
 
+                <ul>
+                  <li>Native Random Oversampling<ul>
+                          <li>Result: Balanced Accuracy Score = 0.770</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                  <li>SMOTE Oversampling<ul>
+                          <li>Result: Balanced Accuracy Score = 0.769</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                </ul>
+
+                <p>Undersampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning.</p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysiss" target="_blank"> Wikipedia</a></p>
+
+                <ul>
+                  <li>Random Undersampling<ul>
+                          <li>Result: Balanced Accuracy Score = 0.770</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                </ul>
+
+                <p>Combination Sampling: These algorithm combines aspects of both,  oversampling and undersampling.</p>
+                <ul>
+                  <li>SMOTEENN ((SMOTE and Edited Nearest Neighbors)<ul>
+                          <li>Result: Balanced Accuracy Score = 0.773</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                </ul>
+              
+                <h3>2. Random Forest and Easy Ensemble Classifier</h3>
+                <p>Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean/average prediction (regression) of the individual trees. </p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Random_forest" target="_blank"> Wikipedia</a></p>
+
+                <p>Ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Unlike a statistical ensemble in statistical mechanics, which is usually infinite, a machine learning ensemble consists of only a concrete finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives.</p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Ensemble_learning" target="_blank"> Wikipedia</a></p>
+
+                <ul>
+                  <li>Random Forest Classifier<ul>
+                          <li>Result: Balanced Accuracy Score = 0.787</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                  <li>Easy Ensemble Classifier<ul>
+                          <li>Result: Balanced Accuracy Score = 0.795</li>
+                          <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></li>
+                      </ul>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -234,7 +286,43 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h2> Machine Learning </h2>
+                <h2> NLP (Natural Language Processing) Algorithms </h2>
+                <p>Natural language processing (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data.</p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank"> Wikipedia</a></p>
+
+                <h3>NLP Algorithms used in this project</h3>
+                <h3>1. NLP using Pyspark</h3>
+                <h4>Accuracy Results:</h4>
+                  <ul>
+                      <li>For output as decimals (0.0 to 10.0): 0.21</li>
+                      <li>For output as integers (0 to 10): 0.40</li>
+                      <li>For output as 5-star ratings (1 to 5): 0.61</li>
+                      <li>For output as 3 Categories (Bad, Average, or Good): 0.78</li>
+                      <li>For output as Sentiment (Positive or Negative): 0.92</li>
+                  </ul>
+                <h4>Summary of Results and Recommendation</h4>
+                <p>This model is fast, and is not overfitted for the review outcomes as negative/positive. It works well when the outcome is in decimals/integers and more than 2 categories &nbsp;&nbsp;</p>
+                <p>Platform: Google Colab</p>
+                <p>Algorithm: NaiveBayes</p>
+                <p><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark" target="_blank"> Repo Link</a></p>
+                <p><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb" target="_blank">Run model on Google Colab (Reading data from AWS PostgresSQL DataBase)</a></p>
+            
+                <h3>2. NLP using Deep Learning (2 layers)</h3>
+                <h4>Accuracy Results:</h4>
+                  <ul>
+                    <li>For output as decimals (0.0 to 10.0): 0.0</li>
+                    <li>For output as integers (0 to 10): 0.0</li>
+                    <li>For output as 5-star ratings (1 to 5): 0.0043</li>
+                    <li>For output as 3 Categories (Bad, Average, or Good): 0.031</li>
+                    <li>For output as Sentiment (Positive or Negative): 0.957</li>
+                  </ul>
+                <h4>Summary of Results</h4>
+                <p>This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show.</p>
+                <p>Platform: Google Colab</p>
+                <p>Model: <a href="https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1" target="_blank"> tf2-preview/gnews-swivel-20dim</a></p>
+                <p><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning" target="_blank"> Repo Link</a></p>
+                <p><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb" target="_blank">Run model on Google Colab (Reading data from AWS PostgresSQL DataBase)</a></p>
+    
               </div>
             </div>
           </div>
@@ -243,7 +331,12 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3>Place info Here...</h3>
+                <h2> Recommendations </h2>
+                <ol>
+                  <li>If the company wants to have the review results in two categories - &apos;positive&apos; and &apos;negative&apos;, then Logistic Regression and Deep Learning NLP are recommended - both have an accuracy score of 0.957.</li>
+                  <li>If the company wants any further granularity in the review output, then PySpark NLP is recommended.</li>
+                  <li>If a balance between granularity and accuracy is desired, then the 3 categories (good, bad, average) review output is suggested. These categories are easy for customers to understand. PySpark NLP is recommended as the model - it gives an accuracy score of 0.786.</li>
+              </ol>
               </div>
             </div>
           </div>
