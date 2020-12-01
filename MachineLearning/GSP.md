@@ -34,17 +34,17 @@ A common problem in classification algorithms are class imbalances. Class imbala
 
     - SMOTE Oversampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Result: Balanced Accuracy Score = 0.769
+        - Balanced Accuracy Score = 0.769
     
 - Undersampling: Oversampling and undersampling in data analysis are techniques used to adjust the class distribution of a data set (i.e. the ratio between the different classes/categories represented). These terms are used both in statistical sampling, survey design methodology and in machine learning.(source: [Wikipedia](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis))
     - Random Undersampling
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Result: Balanced Accuracy Score = 0.770
+        - Balanced Accuracy Score = 0.770
 
-- Combination Sampling: These algorithm combines aspects of both,  oversampling and undersampling.
+- Combination Sampling: These algorithm combines aspects of both, oversampling and undersampling.
     - SMOTEENN ((SMOTE and Edited Nearest Neighbors)
         - [Repo link](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised)
-        - Result:Balanced Accuracy Score = 0.773
+        - Balanced Accuracy Score = 0.773
 
 ***2) Random Forest and Easy Ensemble Classifier***
 
@@ -77,7 +77,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         - For output as Sentiment (Positive or Negative): 0.92
      - Summary of Results and Recommendation:
      This model is fast, and is not overfitted for the review outcomes as negative/positive. It works well when the outcome is in decimals/integers and more than 2 categories   
-    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb)
+    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
 
 2) *NLP - 2/2: NLP using Deep Learning (2 layers)*
@@ -103,4 +103,4 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 ## Recommendations
 * If the company wants to have the review results in two categories - 'positive' and 'negative', then ***Logistic Regression*** and ***Deep Learning NLP*** are recommended - both have an accuracy score of 0.957.
 * If the company wants any further granularity in the review output, then ***PySpark NLP*** is recommended.
-* If a balance between granularity and accuracy is desired, then the 3 categories (good, bad, average) review output is suggested. These categories are easy for customers to understand. ***PySpark NLP*** is recommended as the model - it gives an accuracy score of 0.786.
+* If a balance between granurality and accuracy is desired, then the 3 categories (good, bad, average) review output is suggested. These categories are easy for customers to understand. ***PySpark NLP*** is recommended as the model - it gives an accuracy score of 0.786.
