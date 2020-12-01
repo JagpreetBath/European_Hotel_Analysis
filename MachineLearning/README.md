@@ -90,7 +90,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
         - For output as 3 Categories (Bad, Average, or Good): 0.031
         - For output as Sentiment (Positive or Negative): 0.957
     - Summary of Results:  This model's accuracy for positive/negative review outcomes was better than the model above. The negative side was that this model was overfitted for output as positive/negative as the results below show.     
-    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
+    - [***File to run the model on Google Colab here: Reading data from AWS PostgresSQL DataBase***](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step5_NLP_DL_Review_Pos_Neg_Format.ipynb)
     - Testing the model in real-time
         1. Open Gooogle colab https://colab.research.google.com/
         2. Sign in with Google credentials
