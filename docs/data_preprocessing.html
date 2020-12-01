@@ -132,20 +132,169 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h2> Data Preprocessing Page </h2>
+                <h1> Data Preprocessing </h1>
               </div>
             </div>
           </div>
         </div> 
-        <div class="row">
+        <div class="row" >
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                  <h3>Place info Here...</h3>
+                <h4> Step 1: Observe the source data - While observing the Source file: Hotel_Reviews.csv in a pandas DataFrame </h4>
+                <ul>
+                  <li>Data contains 515738 rows × 17 columns</li>
+                  <ul><li>Link Image</li></ul>
+                  <li>The 17 columns and corresponding data types were</li>
+                  <ul><li>Link Image</li></ul>
+                </ul>
+
+                <h4> Step 2: Since there was no unique column in the table, we used the pandas dataframe index to creae a unique column 'Review_Id' for working with data in PostgreSQL </h4>
+                <ul>
+                  <code>hotel_df.index.name='Review_Id'</code>
+                </ul>
+                
+                <h4>Step 3: Remove null values</h4>
+                <ul>
+                  <h5>Step 3.1: Check for null/na values</h5>
+                  <ul><code>hotel_df.isnull().sum()</code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 3.2: Drop rows that are na/null and reset the index from 0</h5>
+                  <ul><code>hotel_df = hotel_df.dropna().reset_index(drop=True)</code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 3.3: The operation above will delete the index name, so renaming it again as 'Review_Id'</h5>
+                  <ul><code>hotel_df.index.name='Review_Id'</code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 3.4: Check for null again</h5>
+                  <ul><code>hotel_df.isnull().sum()</code></ul>
+                </ul>
+              
+                <h4>Step 4: We found that, for best project efficiency, the 17 columns could be divided into two groups: 'review group' and 'location group' with the review group having information pertaining to reviews only, and the location group with information pertaining to location only.</h4>
+                <p>Breaking the big table into 2 tables: 1st with hotel reviews, 2nd with hotel locations</p>
+                <ul>
+                  <h5>Step 4.1: Create Table 1: Hotel reviews only - no location data (drop columns 'lat'and 'lng')</h5>
+                  <ul><code> 
+                    # hotel reviws without lat and lng <br>
+                    hotel_reviews = hotel_df.drop(columns=['lat','lng'])<br><br>
+                    #view the table <br>
+                    hotel_reviews
+                  </code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 4.2: Create Table 2: DF with locations (no reviews)</h5>
+                  <ul><code>
+                    # creating a subset of the dataframe with unique values on the column 'Hotel_Address' and then reset the index to 0<br>
+                    unique_address_df = hotel_df.drop_duplicates(subset=['Hotel_Address']).reset_index(drop=True) <br><br>
+                
+                    # view the table<br>
+                    unique_address_df
+                  </code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 4.3: Select only 4 columns that we want - "Hotel_Address", "Hotel_Name", "lat", "lng"</h5>
+                  <ul><code>
+                    # selecting the ONLY 4 required columns<br>
+                    hotel_location = unique_address_df[["Hotel_Address", "Hotel_Name", "lat", "lng"]]<br><br>
+                
+                    #view the table<br>
+                    hotel_location
+                  </code></ul>
+                </ul>
+ 
+                <h4>Step 5Create sample tables with 1000 rows</h4>
+                <ul>
+                  <h5>Step 5.1: Table 1: review table - selecting the first 1000 rows</h5>
+                  <ul><code> 
+                    # creating a sample of table 2, with 1000 rows<br>
+                    sample_of_hotel_location = hotel_location.loc[0:999]<br><br>
+                
+                    # view the table<br>
+                    sample_of_hotel_location<br>
+                  </code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 5.2: Table 2: location table - selecting the first 1000 rows</h5>
+                  <ul><code>
+                    # creating a sample of table 1, with 1000 rows<br>
+                    sample_of_hotel_reviews = hotel_reviews.loc[0:999]<br><br>
+                
+                    # view the table<br>
+                    sample_of_hotel_reviews
+                  </code></ul>
+                </ul>
+              
+                <h4>Step 6: Extract city and country using lat and lng, using geopy</h4>
+                <ul>
+                  <h5>Step 6.1: Create 2 new columns for City and Country</h5>
+                  <ul><code> 
+                    # creating 2 new columns<br>
+                    hotel_location_city_country["City"] = ""<br>
+                    hotel_location_city_country["Country"] = ""<br><br>
+                
+                    # view the df<br>
+                    hotel_location_city_country
+                  </code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 6.2: Install GeoPy</h5>
+                  <ul><code>
+                    # install the module geopy<br>
+                    ! pip install geopy<br><br>
+                
+                    # import module<br> 
+                    from geopy.geocoders import Nominatim<br><br>
+                
+                    # initialize Nominatim API <br> 
+                    geolocator = Nominatim(user_agent="geoapiExercises")
+                  </code></ul>
+                </ul>
+                <ul>
+                  <h5>Step 6.3: Create a for loop to iterate through the rows, use the co-ordinates to pull the 'city' and 'county' and store them in the 'city' and 'country' columns</h5>
+                  <ul><code>
+                    # declare a variable to iterate over the rows<br> 
+                    i=0<br> <br> 
+                
+                    # loop for extracting city and county from the data using GeoPy<br> 
+                    for row in hotel_location_city_country.itertuples():<br> 
+                    <ul>Latitude = str(row.lat)<br> 
+                        Longitude = str(row.lng)<br> <br> 
+                    
+                        location = geolocator.reverse(Latitude+","+Longitude) <br> 
+                        address = location.raw['address'] <br> <br> 
+                
+                        # traverse the data <br> 
+                        city = address.get('city', '') <br> 
+                        state = address.get('state', '') <br> 
+                        country = address.get('country', '') <br> 
+                        code = address.get('country_code') <br> 
+                        zipcode = address.get('postcode') <br> <br> 
+                
+                        print(f"Hotel {i+1}: Co-ordinates ({Latitude}, {Longitude}) | City: {city}, {country}")<br> <br> 
+                        
+                        hotel_location_city_country.at[i, 'City'] = city<br> 
+                        hotel_location_city_country.at[i, 'Country'] = country<br> 
+                        i+=1<br> 
+                    </ul>
+                    # view the df<br> 
+                    hotel_location_city_country
+                  </code></ul>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+        <div class="row" >
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h1>Next Step </h1>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>  
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
