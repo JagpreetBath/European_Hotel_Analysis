@@ -164,6 +164,7 @@
             </div>
           </div>
         </div>
+
         <div class="row" >
           <div class="col-12">
             <div class="card card-chart">
@@ -173,15 +174,141 @@
             </div>
           </div>
         </div> 
+
         <div class="row">
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3>Place info Here...</h3>
+                <h3>Resources</h3>
+                <p>
+                  <ul>
+                    <li>Google Colab</li>
+                    <li>Libraries - PySpark</li>
+                    <li>Algorithm/Model used - NaiveBayes Classifier</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>
         </div>  
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Objective</h3>
+                <p>
+                  Analysts live by the saying 'the devil is in the details'. They would absolutely love a review score to be as detailed as possible - knowing if a score is 7.5, 8.5, or 9.5 is way better than knowing that a review is simply 'positive.
+                  <br><br>
+                  A very detailed review score, however, can pose a big challange in front of a Machine Leaning engineer, who wants to create a model to predict review score using review text as input. No ML engineer would want to show that their model has a very low accuracy - to increase the accuracy, he might want less number of possible outcomes.
+                  <br><br>
+                  The objective of this analysis is to find a middle ground between the loss of detail and accuracy of the model in predecting the outcome.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Initial observation/thoughts</h3>
+                <p>
+                  <ul>
+                    <li>The data has 16 columns and 512,470 rows</li>
+                    <li>There are 2 different columns for reviews: 'Positive reviews' and 'Negative Reviews'</li>
+                    <li>The column 'Positive reviews' has many entries as 'No Positive'</li>
+                    <li>The column 'Negative reviews' has many entries as 'No Negative'</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+         <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Strategy</h3>
+                <p>
+                  <ul>
+                    <li>Dropped 'No Positive' and 'No negative' entries</li>
+                    <li>Combined the 2 columns ('Positve Reviews' and 'Negative Reviews') into 1</li>
+                    <li>Dropped all but 2 columns that are required for NLP</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 1: Processing data for Attempt 1</h3>
+                <p>
+                  <ul>
+                    <li>Changing 'No Negative' and 'No Positive' entries under 'Negative Review' and 'Positive_Review' to null</li>
+                    <code>
+                      hotel_reviews.loc[(hotel_reviews["Negative_Review"] == "No Negative"), "Negative_Review"] = ''
+                      <br>
+                      hotel_reviews.loc[(hotel_reviews["Positive_Review"] == "No Positive"), "Positive_Review"] = ''
+                    </code>
+                    <br>
+                    <li>Merging Positive and Negative reviews into 1 column</li>
+                    <code>
+                      hotel_reviews["Review"] = hotel_reviews["Negative_Review"] + hotel_reviews["Positive_Review"]
+                    </code>
+                    <br>
+                    <li>Checking for null and na values using pandas</li>
+                    <code>
+                      hotel_reviews.isnull().sum()
+                      <br>
+                      hotel_reviews.isna().sum()
+                    </code>
+                    <br>
+                    <li>Retaining only two columns that are required for NLP - 'Review' and Reviewer_Score'</li>
+                    <code>
+                      hotel_reviews_for_NLP1_float_review_score = base_hotel_reviews_for_NLPs[['Review','Reviewer_Score']]
+                    </code>
+                    <br>
+                    <li>Format of data after the changes</li>
+                    <img src="assets/img/cleaned_data_using_pandas_for_NLP.png" alt="cleaned_data_using_pandas_for_NLP">
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 2: Cleaning data using PySpark in Google Colab</h3>
+                <p>
+                  <ul>
+                    <li></li>
+                    <code>df.filter(df["Review"] == "").count()
+                    <br>
+                    df.filter(isnan(df["Review"])).count()
+                    <br>
+                    df.filter(df["Review"].isNull()).count()
+                  </code>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
