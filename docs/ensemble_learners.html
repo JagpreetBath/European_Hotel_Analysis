@@ -168,7 +168,7 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h2> Ensemble Learners </h2>
+                <h1> Ensemble Learners </h1>
               </div>
             </div>
           </div>
@@ -186,28 +186,167 @@
             </div>
           </div>
         </div> 
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3> Explanation of Model Choice </h3>
+                <p> One of the objectives of the machine learning portion of our project was to predict if hotel reviews provided by customers would either be "positive" or "negative".  We accomplished this by employing different techniques to build and evaluate algorithms/models using resampling.  Afterwards, we compared the predictions/balanced accuracy scores from the various models with each other.  The chosen data from our dataset was first tested with a Simple Logistic Regression algorithm to determine our "first" balanced accuracy score.  This score was then used as a "baseline" to compare with the balanced accuracy scores from the other algorithms.</p>
+                <h4> Initial Steps </h4>
+                <p> Prior to running our Simple Logistic Regression algorithm (or any algorithm for that matter), we had to take the folloing steps:<ul>
+                <li> Create an empty Review_Class column in our data table. </li>
+                <li> Fill the Review_Class column with either "positive" or "negative" classifications.  (Note: Reviewer_Score column values greater than or equal to 5.0 were coded/classified as "positive" and Reviewer_Score column values less than or equal to 4.9 were coded/classified as "negative") </li>
+                <li> Using label encoding code, label all positive and negative classifications into float values (0 or 1) by converting the string values. </li>
+                <li> Using label encoding code, label all Country classifications into float values (0-5) by converting the string values. </li>
+                <li> Identify the target variable (Review_Class). </li>
+                <li> Disgard all irrelevant columns in our dataset for our machine learning models.  In addition to the Review_Class and Country columns, Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts were also included in our various machine learning models. </li>
+                </ul>
+                <h4> Reasoning </h4>
+                <p> After converting our positive and negative labels into float values (0 for negative, 1 for positive), we saw a class imbalance of 22,144 0-values and 490,326 1-values.  This class imbalance necessitated the use of the machine learning models seen below.  This also includes the Random Forest and Easy Ensemble Classifiers. </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row" >
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
                 <h2> Ensemble Learners Strategies/Results </h2>
-                <p> Random Forest Classifier: </p>
-                <p> Balanced Accuracy Score = 0.787 </p>
-                <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></p>
-                <p> Easy Ensemble Classifier: </p>
-                <p> Balanced Accuracy Score = 0.795 </p>
-                <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_Supervised" target="_blank"> Repo Link</a></p>
+                <p> Due to our familiarity, we utilized Random Forest and Easy Ensemble Classifier machine learning models for further comparisons with our Logistic Regression model results. </p>
+                <ul>
+                  <li> Random Forest Classifier: <ul>
+                    <li> Balanced Accuracy Score = 0.787 </li>
+                    <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb" target="_blank"> Repo Link</a></p>
+                    </ul>
+                </ul>
+                <ul>
+                  <li> Easy Ensemble Classifier: <ul>
+                  <li> Balanced Accuracy Score = 0.795 </li>
+                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Forest_and_Easy_Ensemble_Classifier.ipynb" target="_blank"> Repo Link</a></p>
+                  </ul>
+                </ul>
               </div>
           </div>
-        </div> 
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3> Model Limitations and Benefits </h3>
+                <p> Moving from logistic regression algorithms/models to other algorithms such as Random Forest and Easy Ensemble Classifiers resulted in the balanced accuracy scores generally improving (only slighlty in our case).  This is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combine different subsets of the minority and majority data (i.e using multiple learning algorithms to obtain better predictive performance). </p>
+                <p> </p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Ensemble_learning" target="_blank"> Wikipedia</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" >
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3> General Coding For Logistic Regression and Resampling </h3>
+                <h4> Step 1: Reading our Dataset from our hotel_combined.csv file </h4>
+                <ul>
+                <li> Data contains 512470 rows × 21 columns </li>
+                </ul>
+                <ul>
+                  <ul><code>data = Path('../ML_Supervised/hotel_combined.csv')</code></ul>
+                  <ul><code>df = pd.read_csv(data)</code></ul>
+                  <ul><code>df.head()</code></ul>
+                </ul>
+
+                <h4> Step 2: Creating a temporary empty column called Review Class at the end of our Dataset. </h4>
+                <ul>
+                  <ul><code>df["Review_Class"] = ""</code></ul>
+                  <ul><code>df</code></ul>
+                </ul>
+                
+                <h4> Step 3: Labelling Reviewer_Scores either Positive or Negative.</h4>
+                <ul>
+                  <ul><code>df.loc[df["Reviewer_Score"] <= 4.9, "Review_Class"] = "negative"</code></ul>
+                  <ul><code>df.loc[df["Reviewer_Score"] >= 5.0, "Review_Class"] = "positive"</code></ul>
+                  <ul><code>df.head()</code></ul>
+                </ul>
+              
+                <h4> Step 4: Using the LabelEncoder to turn the labels in the Review_Class column into numbers.</h4>
+                <ul>
+                  <ul><code>from sklearn.preprocessing import LabelEncoder</code></ul>
+                  <ul><code>le = LabelEncoder()</code></ul>  
+                  <ul><code>df2 = df.copy()</code></ul>
+                  <ul><code>df2['Review_Class'] = le.fit_transform(df2['Review_Class'])</code></ul>
+                </ul>
+ 
+                <h4>Step 5: Using the LabelEncoder to turn the labels in the Country column into numbers.</h4>
+                <ul>
+                  <ul><code>from sklearn.preprocessing import LabelEncoder</code></ul>
+                  <ul><code>le = LabelEncoder()</code></ul>  
+                  <ul><code>df3 = df2.copy()</code></ul>
+                  <ul><code>df3['Country'] = le.fit_transform(df3['Country'])</code></ul>
+                  <ul><code>df3.head()</code></ul>
+                </ul>
+              
+                <h4>Step 6: Checking the balance of our target values.  There is a significant inbalance in the direction of the positive reviews.</h4>
+                <ul>
+                  <ul><code>df3['Review_Class'].value_counts()</code></ul>
+                </ul>
+                
+                <h4>Step 7: Defining our target variable ('Review_Class') and excluding unecessary columns in our Machine Learning Model.</h4>
+                <ul>
+                  <ul><code>x_cols = [i for i in df.columns if i not in ('Review_Id', 'Hotel_Address', 'Additional_Number_of_Scoring',</code></ul>
+                  <ul><code>'Review_Date', 'Hotel_Name', 'Reviewer_Nationality', 'Negative_Review',</code></ul>  
+                  <ul><code>'Total_Number_of_Reviews', 'Total_Number_of_Reviews_Reviewer_Has_Given',</code></ul>
+                  <ul><code>'Reviewer_Score', 'Tags', 'days_since_review', 'City',</code></ul>
+                  <ul><code>'Positive_Review', 'Review_Class')]</code></ul>
+                  <ul><code>X = df3[x_cols]</code></ul>
+                  <ul><code>y = df3['Review_Class']</code></ul>
+                </ul>
+
+                <h4>Step 8: Splitting our data into testing and training sets.</h4>
+                <ul>
+                  <ul><code>from sklearn.model_selection import train_test_split</code></ul>
+                  <ul><code>X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)</code></ul>  
+                </ul>
+
+                <h4>Step 9: Resampling the training data with our machine learning model of choice (BalancedRandomForestClassifier in this case).</h4>
+                <ul>
+                  <ul><code>from imblearn.ensemble import BalancedRandomForestClassifier</code></ul>
+                  <ul><code>clf_model = BalancedRandomForestClassifier(n_estimators=100, random_state=1)</code></ul>
+                  <ul><code>clf_model.fit(X_train, y_train)</code></ul>
+                </ul>
+
+                <h4>Step 10: Calculating the balanced accuracy score.</h4>
+                <ul>
+                  <ul><code>from sklearn.metrics import balanced_accuracy_score</code></ul>
+                  <ul><code>y_pred = clf_model.predict(X_test)</code></ul>
+                  <ul><code>balanced_accuracy_score(y_test, y_pred)</code></ul>
+                </ul>
+
+                <h4>Step 11: Displaying the confusion matrix.</h4>
+                <ul>
+                  <ul><code>from sklearn.metrics import confusion_matrix, classification_report</code></ul>
+                  <ul><code>matrix = confusion_matrix(y_test, y_pred)</code></ul>
+                  <ul><code>print(matrix)</code></ul>
+                </ul>
+
+                <h4>Step 12: Printing the imbalanced classification report.</h4>
+                <ul>
+                  <ul><code>from imblearn.metrics import classification_report_imbalanced</code></ul>
+                  <ul><code>print(classification_report_imbalanced(y_test, y_pred))</code></ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
                 <h3> Ensemble Learners Summary/Recommendations </h3>
-                <p> To summarize, Logistic Regression, Random Forest, and Easy Ensemble are used to address class imbalance scenarios.  Class imbalance refers to when one class is much larger than another class in a set of data.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones. </p>
-                <p> When looking only at the Balanced Accuracy Scores (not accounting for the Precision Averages and the Recall/Sensitivity Averages), one can see that the highest score belongs to the Simple Logistic Regression algorithm (0.957).  However, when looking at the Precision Averages (0.95), the Recall/Sensitivity Averages (0.79), as well as the high Balanced Accuracy Score (0.795), we would recommend the (Easy Ensemble Classifier) algorithm to use for predicting positive and negative hotel reviews. </p>
-                <p> Generally speaking, as we moved from logistic regression algorithms to other algorithms such as Random Forest and Easy Ensemble Classifiers the averages and accuracy scores generally increased.  This is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combining different subsets of the minority and majority data. </p>
+                <p> To summarize, Logistic Regression, Random Forest, and Easy Ensemble models are used to address class imbalance scenarios.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones. </p>
+                <p> Initially, only the Review_Class and Country columns were included in the various machine learning models.  The balanced accuracy scores for this round of testing was between 0.59 and 0.65.  The Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts columns were then added/included into our various machine learning models, and the balanced accuracy scores for this second round of testing improved dramatically.  The scores ranged from (0.79 to 0.80). </p>
+                <p> Including a customers average score, as well as their positive and negative word counts provided the machine learning algorithms/models more data in order to make predictions on whether future reviews would be positive or negative.</p>
+                <p> When looking only at the balanced accuracy scores (not including the set "baseline" balanced accuracy score from our Simple Logistic Regression model), one can see that the highest score belongs to the Easy Ensemble Classifer model with a Balanced Accuracy Score of 0.795.  Thus, the Easy Ensemble Classifier algorithm is recommended to use for predicting positive and negative hotel reviews. </p>
+                <p> Generally speaking, as we moved from logistic regression algorithms to other algorithms such as Random Forest and Easy Ensemble Classifiers the averages and accuracy scores generally increased.  As mentioned earlier, this is not necessarily surprising as Random Forest and Easy Ensemble Classifiers combine different subsets of the minority and majority data to generate more accurate predictions. </p>
               </div>
             </div>
           </div>

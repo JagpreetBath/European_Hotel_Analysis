@@ -132,7 +132,7 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h2> Database Page </h2>
+                <h1> Database </h1>
               </div>
             </div>
           </div>
@@ -141,7 +141,98 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                  <h3>Place info Here...</h3>
+                <h2>Storing tables in Database</h2>
+                <h3>1. PostgreSQL</h3>
+                <h4>Step 1: Create the ERD diagrams using <a href="https://www.quickdatabasediagrams.com/" target="_blank">QuickDBD</a></h4>
+                <ul><img src="assets/img/DB_ERD.png" alt="DB_ERD"></ul>
+                
+                <h4>Step 2: Create Schemas using <a href="https://www.quickdatabasediagrams.com/" target="_blank">QuickDBD</a></h4>
+                <ul>
+                  <h5>Export Schemas from <a href="https://www.quickdatabasediagrams.com/" target="_blank">QuickDBD</a></h5>
+                  <p>NOTE: If you have used non-SQL datatypes in your design, you will have to change these here.</p>
+                  <ul><code>
+                    CREATE TABLE "Hotel_Reviews" (<br>
+                    <ul>
+                      "Id" int   NOT NULL,<br>
+                      "Hotel_Address" varchar   NOT NULL,<br>
+                      "Additional_Number_of_Scoring" int   NOT NULL,<br>
+                      "Review_Date" date   NOT NULL,<br>
+                      "Average_Score" float   NOT NULL,<br>
+                      "Hotel_Name" varchar   NOT NULL,<br>
+                      "Reviewer_Nationality" varchar   NOT NULL,<br>
+                      "Negative_Review" varchar   NOT NULL,<br>
+                      "Review_Total_Negative_Word_Counts" int   NOT NULL,<br>
+                      "Total_Number_of_Reviews" int   NOT NULL,<br>
+                      "Positive_Review" varchar   NOT NULL,<br>
+                      "Review_Total_Positive_Word_Counts" int   NOT NULL,<br>
+                      "Total_Number_of_Reviews_Reviewer_Has_Given" int   NOT NULL,<br>
+                      "Reviewer_Score" float   NOT NULL,<br>
+                      "Tags" varchar   NOT NULL,<br>
+                      "days_since_review" varchar   NOT NULL,<br>
+                      CONSTRAINT "pk_Hotel_Reviews" PRIMARY KEY ("Id")</ul>
+                    );<br><br>
+
+                    CREATE TABLE "Hotel_Location" (<br>
+                      <ul>  
+                        "Hotel_Address" varchar   NOT NULL,<br>
+                        "Hotel_Name" varchar   NOT NULL,<br>
+                        "lat" float   NOT NULL,<br>
+                        "lng" float   NOT NULL,<br>
+                        CONSTRAINT "pk_Hotel_Location" PRIMARY KEY ("Hotel_Address")</ul>
+                    );<br><br>
+
+                    ALTER TABLE "Hotel_Reviews" ADD CONSTRAINT "fk_Hotel_Reviews_Hotel_Address" FOREIGN KEY("Hotel_Address")<br>
+                    REFERENCES "Hotel_Location" ("Hotel_Address");
+                  </ul></code>
+                </ul>
+                
+                <h4>Step 3: Import the tables into PostgreSQL</h4>
+
+                <h4>Step 4: View Table 1</h4>
+                <ul><img src="assets/img/Sample_hotel_reviews.png" alt="Sample_hotel_reviews"></ul>
+
+                <h4>Step 5: View Table 2</h4>
+                <ul><img src="assets/img/Sample_hotel_location.png" alt="Sample_hotel_location"></ul>
+
+
+                <h4>Step 6: Join the 2 tables</h4>
+                <ul>
+                  <h5>Joining the 2 tables into 1 table</h5>
+                  <ul><code>
+                    create table "Hotel_reviews_and_locations_combined_table" AS<br>
+                    SELECT <br>
+                      public."Hotel_Reviews"."Id",<br>
+                      public."Hotel_Reviews"."Hotel_Address",<br>
+                      public."Hotel_Reviews"."Additional_Number_of_Scoring",<br>
+                      public."Hotel_Reviews"."Review_Date",<br>
+                      public."Hotel_Reviews"."Average_Score",<br>
+                      public."Hotel_Reviews"."Hotel_Name",<br>
+                      public."Hotel_Reviews"."Reviewer_Nationality",<br>
+                      public."Hotel_Reviews"."Negative_Review",<br>
+                      public."Hotel_Reviews"."Review_Total_Negative_Word_Counts",<br>
+                      public."Hotel_Reviews"."Total_Number_of_Reviews",<br>
+                      public."Hotel_Reviews"."Review_Total_Positive_Word_Counts",<br>
+                      public."Hotel_Reviews"."Total_Number_of_Reviews_Reviewer_Has_Given",<br>
+                      public."Hotel_Reviews"."Reviewer_Score",<br>
+                      public."Hotel_Reviews"."Tags",<br>
+                      public."Hotel_Reviews"."days_since_review",<br>
+                      public."Hotel_Location"."lat",<br>
+                      public."Hotel_Location"."lng"<br>
+                    from public."Hotel_Reviews"<br>
+                    left join public."Hotel_Location" ON public."Hotel_Reviews"."Hotel_Address" =public."Hotel_Location"."Hotel_Address";
+                  </ul></code>
+                </ul>
+
+                <h4>Step 7: View the combined table</h4>
+                <ul><img src="assets/img/Combined_table_reviews_and_locations.png" alt="Combined_table_reviews_and_locations"></ul>
+
+                <h3>2. AWS RDS PostgreSQL database</h3>
+                <h4>Step 1: Creating a PostgreSQL DB on AWS</h4>
+                <ul><img src="assets/img/AWS_RDS_DB.png" alt="AWS_RDS_DB"></ul>
+
+                <h4>Step 2: Connecting the AWS RDS to local PgAdmin</h4>
+                <ul><img src="assets/img/AWS_RDS_PgAdmin_DB_connection_with_local_PgAdmin.png" alt="AWS_RDS_PgAdmin_DB_connection_with_local_PgAdmin"></ul>
+
               </div>
             </div>
           </div>
