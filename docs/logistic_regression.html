@@ -203,6 +203,7 @@
                 </ul>
                 <h4> Reasoning </h4>
                 <p> After converting our positive and negative labels into float values (0 for negative, 1 for positive), we saw a class imbalance of 22,144 0-values and 490,326 1-values.  This class imbalance necessitated the use of the machine learning models seen below. </p>
+                <p> For our initial/first runs, only the Review_Class and Country columns from our dataset were included in the various machine learning models.  This produced middling balanced accuracy scores for all algorithms.  The Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts columns were then added/included into our various machine learning models, which produced higher balanced accuracy scores for the second round of testing.</p>
               </div>
             </div>
           </div>
@@ -390,15 +391,25 @@
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3> Logistic Regression Summary/Recommendations </h3>
-                <p> To summarize, Simple Logistic Regression, Oversampling, Undersampling, and SMOTEENN are used to address class imbalance scenarios.  In our European Hotel Analysis, class imbalances refer to positive and negative hotel reviews.  Judging by the reviews in our original dataset, there are a far greater number of positive reviews over negative ones.</p>
-                <p> Initially, only the Review_Class and Country columns were included in the various machine learning models.  The balanced accuracy scores for this round of testing was between 0.51 and 0.53.  The Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts columns were then added/included into our various machine learning models, and the balanced accuracy scores for this second round of testing improved dramatically.  The scores ranged from (0.77 to 0.96). </p>
-                <p> Including a customers average score, as well as their positive and negative word counts provided the machine learning algorithms/models more data in order to make predictions on whether future reviews would be positive or negative.</p>
-                <p> If the company wants to have the review results for the best logistic regression category (positive or negative) based solely on the balanced accuracy score, then Simple Logistic Regression is recommended based on it's accuracy score of 0.957.</p>
+                <h3> Summary of Results </h3>
+                <li> Simple Logistic Regression, Oversampling, Undersampling, and SMOTEENN are used to address class imbalance scenarios. </li>
+                <li> The balanced accuracy scores for our inital round of logistic regression testing was between 0.52 and 0.95.  After adding more data from our dataset for the second round of testing, the balanced accuracy scores ranged from 0.77 to 0.96. </li>
               </div>
             </div>
           </div>
         </div>  
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3> Recommendations </h3>
+                <li> Including a customers average score, as well as their positive and negative word counts provided the machine learning algorithms/models more data in order to make predictions on whether future reviews would be positive or negative.</li>
+                <li> If the company wants to have the review results for the best logistic regression model based solely on the balanced accuracy score, then Simple Logistic Regression is recommended based on it's accuracy score of 0.957.</li>
+                <li> Performing Cluster Centroid Undersampling in addition to Random Undersampling would have provided more comparison prediction data.</li>
+              </div>
+            </div>
+          </div>
+        </div>
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
