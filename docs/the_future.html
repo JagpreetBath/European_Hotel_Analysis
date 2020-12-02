@@ -173,39 +173,74 @@
             <div class="card card-chart">
               <div class="card-header ">
                 <h2> So, what is the future of this project ! </h2>
+                <p>This analysis is very relevant today, a user can trust it and make a decision.</p>
+                <br>
+<p>But, what about 6 months from now, or a year or 2 years from now? Will this analysis be as useful as it is today?</p>
+<br>
+<p>Perhaps not! 
+  <br>By that time, there would have been tens of thousands of more visits to these hotels...
+  <br>Perhaps new hotels would started services... 
+  <br>Perhaps some hotels from our list would have improved their services by a big margin, and others wouldn&apos;t...</p>
+<p>Perhaps the perception of a Hotel in the minds of customers has changed by a small extent - or a large?</p>
+<br>
+<p>So, to make the analysis really relevant at that time in the future, we would have to incorporate all reviews at the time of viewing the results (and not just what we have today)</p>
               </div>
             </div>
           </div>
         </div> 
 
-
-        <div class="row">
+        <div class="row" >
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3>How it will work in the future </h3>
-                <p>The future of the project lies in a living database of reviews. As people visit hotels, they will leave reviews, the </p>
+                <h2> Here is what we plan to do</h2>
+                <ol>
+                  <li>We will capture the every review.</li>
+                  <li>We will used our saved Deep Learning NLP model to predict the sentiment of the review.</li>
+                  <li>We will add the data above to our PostgreSQL Database on RDS</li>
+                  <li>We will use Tableau to analyze the data</li>
+              </ol>
+              <p>The data upload and analysis can be scheduled once a week/month.</p>
+              <p>Or it can happen real-time on the cloud.</p>
+
               </div>
             </div>
           </div>
-        </div>  
-
-
-
+        </div> 
 
         
         <div class="row">
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h3>How it will work in the future </h3>
-                <p>The future of the project lies in a living database of reviews. As people visit hotels, they will leave reviews, the </p>
+                <h3>POC (review capture and sentiment prediction) </h3>
+                
+                <ol>
+                  <li>Open <a href="https://colab.research.google.com/"> Google Colab</a></li>
+                  <li>Sign in with your Google credentials</li>
+                  <li>Upload <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning/ML_NLP_DeepLearning/Realtime_testing_of_DL_NLP_model.ipynb">this file </a>on Google Colab</li>
+                  <li>Place <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/SavedModel5_NLP_DL_Review_Pos_Neg_Format.h5">this file </a> at the root of the Colab file above</li>
+                  <li>Run the File: Runtime -&gt; Run All</li>
+                  <li>Enter as many reviews as you want to test</li>
+                  <li>View the model predictions.</li>
+              </ol>
+
               </div>
             </div>
           </div>
         </div>  
 
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Sample Outcome</h3>
+                <img src="assets/img/sample_output_real-time_test.png" alt="sample_output_real-time_test">
 
+              </div>
+            </div>
+          </div>
+        </div>  
 
 
         <!-- ------------- content of the page ENDS here -------------  -->
