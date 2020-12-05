@@ -20,7 +20,7 @@ The selected topic for Final Project is a "European Hotel Review Analysis". The 
 ### Reason why we selected our topic
 Based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skills associated with ETL (Extract, Transfer, and Load), machine learning models, and interactive data visualization dashboards.
 
-### Description of their source of data
+### Data Source Description
 This dataset contains 515,000 customer reviews and a scoring of 1493 luxury hotels across Europe. The geographical location of hotels is also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
 
 [Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
@@ -45,7 +45,7 @@ The CSV file contains 17 fields. The description of each field is as below:
 - lat: Latitude of the hotel
 - lng: longitude of the hotel
 
-### Questions we are trying answer/ What are we trying to learn
+### Questions we are trying to answer
 
 - Train and evaluate various machine learning models to determine which selected machine learning model predicts the review score with the highest accuracy.
 - What is the Avg Review Score per Country?
@@ -59,6 +59,63 @@ The CSV file contains 17 fields. The description of each field is as below:
 - Based on the reviewer's nationality - What are the positive and negative Avg words count per Top 5 Hotels per country?
 - What is the recommended hotel per country?
 
+## Results 
+
+### Machine Learning Models
+MACHINE LEARNING ALGORITHM		|   ACCURACY SCORE
+|---|----|
+Simple Logistic Regression				|	0.957		
+Logistic Regression with Native Random Oversampling		|	0.770
+Logistic Regression with SMOTE Oversampling			|	0.769
+Logistic Regression with Random Undersampling		|	0.770
+Logistic Regression with SMOTEENN			|	0.773
+Random Forest Classifier				|	0.787
+Easy Ensemble Classifier				|	0.795
+NLP using Pyspark					|	0.920
+NLP using Deep Learning (2 layers)				|	0.957
+|||
+
+### Tableau Analysis 
+#### What is the Avg Review Score per Country?
+![Result1](Resources/Result1.jpg)
+
+#### What % are positive reviews and negative reviews per Country?
+![Result2](Resources/Result2.jpg)
+
+#### Overtime - Did the Avg Reviews score of the Country improved or degraded?  
+![Result3](Resources/Result3.jpg)
+
+#### What are the Top 5 hotels with the highest review score per Country?
+![Result4](Resources/Result4.jpg)
+
+#### Overtime - Did the Avg Reviews score of the Top 5 Hotels per Country improved or degraded?
+![Result5](Resources/Result5.jpg)
+
+#### What is the Number of Reviews per Reviewer Nationality?
+![Result6](Resources/Result6.jpg)
+
+#### What are the Top 5 Reviewer Nationality per country?
+![Result7](Resources/Result7.jpg)
+
+#### What % are positive reviews and negative reviews per Top 5 Reviewer Nationality per Country?
+![Result8](Resources/Result8.jpg)
+
+#### Based on the reviewer's nationality - What are the positive and negative Avg words count per Top 5 Hotels per country?
+![Result9](Resources/Result9.jpg)
+
+## Recommendations
+### Machine Learning Models
+1. If the company wants to have the review results in two categories - 'positive' and 'negative', then Logistic Regression and Deep Learning NLP are recommended - both have an accuracy score of 0.957.
+2. If the company wants any further granularity in the review output, then PySpark NLP is recommended.
+3. If a balance between granularity and accuracy is desired, then the 3 categories (good, bad, average) review output is suggested. These categories are easy for customers to understand. PySpark NLP is recommended as the model - it gives an accuracy score of 0.786.
+
+### Best Hotel per Country 
+1. España/Spain: Hotel Casa Camper
+2. France: Ritz Paris
+3. Italia/Italy: Excelsior Hotel Gallia Luxury Collection Hotel
+4. Nederland/Netherlands: Waldorf Astoria Amsterdam
+5. Österreich/Austria: Hotel Sacher Wien
+6. United Kingdom: 41
 
 ## Resources 
 [Website](https://jagpreetbath.github.io/European_Hotel_Analysis/index.html)

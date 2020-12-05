@@ -179,9 +179,8 @@
               <div class="card-header ">
                 <h2> Overview </h2>
                 <p> Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression (or logit regression) is estimating the parameters of a logistic model (a form of binary regression).</p>
-                <p> Source:<a href="https://en.wikipedia.org/wiki/Logistic_regression" target="_blank"> Wikipedia</a></p>
                 <p> A common problem in classification algorithms are class imbalances. Class imbalance refers to a situation in which the existing classes in a dataset aren't equally represented (i.e. when one class is much larger than the other class).</p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-1-oversampling?module_item_id=102452" target="_blank"> UTOR Bootcamp</a></p>
+                <p> Source:<a href="https://en.wikipedia.org/wiki/Logistic_regression" target="_blank"> Wikipedia</a></p>
               </div>
             </div>
           </div>
@@ -199,7 +198,7 @@
                 <li> Using label encoding code, label all positive and negative classifications into float values (0 or 1) by converting the string values. </li>
                 <li> Using label encoding code, label all Country classifications into float values (0-5) by converting the string values. </li>
                 <li> Identify the target variable (Review_Class). </li>
-                <li> Disgard all irrelevant columns in our dataset for our machine learning models.  In addition to the Review_Class and Country columns, Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts were also included in our various machine learning models. </li>
+                <li> Discard all irrelevant columns in our dataset for our machine learning models.  In addition to the Review_Class and Country columns, Average_Score, Review_Total_Negative_Word_Counts, and Review_Total_Positive_Word_Counts were also included in our various machine learning models. </li>
                 </ul>
                 <h4> Reasoning </h4>
                 <p> After converting our positive and negative labels into float values (0 for negative, 1 for positive), we saw a class imbalance of 22,144 0-values and 490,326 1-values.  This class imbalance necessitated the use of the machine learning models seen below. </p>
@@ -215,11 +214,10 @@
                 <h2> Simple Logistic Regression Results </h2>
                 <h3> Logistic Regression </h3>
                 <p> In Logistic Regression, the model analyzes the available data and when presented with a new sample, mathematically determines its probability of belonging to a class. </p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-3-1-overview-of-logistic-regression?module_item_id=102408" target="_blank"> UTOR Bootcamp</a></p>
                 <ul>  
                   <li> Simple Logistic Regression Results:<ul>
                   <li> Balanced Accuracy Score = 0.957</li>
-                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Simple_Logistic_Regression.ipynb" target="_blank"> Repo Link</a></p>
+                  <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Simple_Logistic_Regression.ipynb" target="_blank"> Repo Link</a></li>
                   </ul>
                 </ul>
               </div>
@@ -236,35 +234,32 @@
                 <p> In Random Oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. </p>
                 <p> In SMOTE, like random oversampling, the size of the minority is increased. The difference between the two lies in how the minority class is increased in size.  Unlike Random Oversampling, new instances are interpolated in SMOTE. </p>
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank"> Wikipedia</a></p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-1-oversampling?module_item_id=102452" target="_blank"> UTOR Bootcamp</a></p>
                 <ul>
                   <li> Native Random Oversampling Results:<ul>
                   <li> Result: Balanced Accuracy Score = 0.770</li>
-                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Oversampling.ipynb" target="_blank"> Repo Link</a></p>
+                  <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Oversampling.ipynb" target="_blank"> Repo Link</a></li>
                   </ul>
                   <li> SMOTE Oversampling Results:<ul>
                   <li> Balanced Accuracy Score = 0.769</li>
-                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_SMOTE_Oversampling.ipynb" target="_blank"> Repo Link</a></p>
+                  <li> <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_SMOTE_Oversampling.ipynb" target="_blank"> Repo Link</a></li>
                   </ul>
                 </ul>
                 <h3> 2. Undersampling </h3>
                 <p> Undersampling: Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased. For this project, the only method of undersampling used was Random Undersampling. Another method of undersampling called Cluster Centroid Undersampling was attempted, but due to time constraints was not included in our final report. </p>
                 <p> In Random Undersampling, randomly selected instances from the majority class are removed until the size of the majority class is reduced, typically to that of the minority class. </p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-2-undersampling?module_item_id=102454" target="_blank"> UTOR Bootcamp</a></p>
                 <p> Source:<a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank"> Wikipedia</a></p>
                 <ul>  
                   <li> Random Undersampling Results:<ul>
                   <li> Balanced Accuracy Score = 0.770</li>
-                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Undersampling.ipynb" target="_blank"> Repo Link</a></p>
+                  <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Random_Undersampling.ipynb" target="_blank"> Repo Link</a></li>
                   </ul>
                 </ul>
                 <h3> 3. Combination Sampling </h3>
                 <p> Combination Sampling: These algorithms combines aspects of both, oversampling and undersampling.   For this project, we used the SMOTEENN algorithm as our combination sampling method.  SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. </p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-3-combination-sampling-with-smoteenn?module_item_id=102456" target="_blank"> UTOR Bootcamp</a></p>
                 <ul>
                   <li> SMOTEENN (SMOTE and Edited Nearest Neighbors) Results:<ul>
                   <li> Balanced Accuracy Score = 0.773</li>
-                  <p> Source:<a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Combination_Sampling_With_SMOTEEN.ipynb" target="_blank"> Repo Link</a></p>
+                  <li><a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_Supervised/ML_Combination_Sampling_With_SMOTEEN.ipynb" target="_blank"> Repo Link</a></li>
                   </ul>
                 </ul>
               </div>
@@ -278,7 +273,6 @@
                 <h3> Model Limitations and Benefits </h3>
                 <p> As mentioned earlier, one problem in Logistic Regression algorithms are class imbalances. Although oversampling and undersampling help with this issue, they also present other issues themselves. </p>
                 <p> A downside of oversampling is its reliance on the immediate neighbors of a data point. Because the algorithm doesn't see the overall distribution of data, the new data points it creates can be heavily influenced by outliers. This can lead to noisy data. With undersampling, the downsides are that it involves loss of data and is not an option when the dataset is small. </p>
-                <p> Source:<a href="https://bootcampspot.instructure.com/courses/193/pages/17-dot-10-dot-3-combination-sampling-with-smoteenn?module_item_id=102456" target="_blank"> UTOR Bootcamp</a></p>
               </div>
             </div>
           </div>
