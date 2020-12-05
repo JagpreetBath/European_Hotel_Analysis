@@ -1,9 +1,21 @@
 # European Hotel Analysis
 
 ## Project Overview
+Sally wants to go on vacation. She is thinking about where to go and which hotel should she choose to stay? What are her options? 
+1. Choose randomly 
+2. Choose based on experience or recommendation of friends and family 
+3. Choose based on Hours of Research
+
+The topic we select for our Final Project is a "European Hotel Review Analysis". The objective of our project is to create a web application that can be used by the consumer to find hotels faster and easily, and hotel management can use to improve their performance. Here are the steps that will allow us to achieve our goal: 
+1. Create a database and host it on AWS.
+2. Run various machine learning models to predict review scoring and compare which machine learning model is most accurate.
+3. Create a fully functioning and interactive dashboard using tableau.
+4. Create and host a Web application on Github to showcase results. 
+
+Lastly, based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skills associated with ETL (Extract, Transfer, and Load), machine learning models, and data visualization.
 
 ### Selected Topic
-The selected topic for Final Project is a "European Hotel Review Analysis".  The dataset is associated with hotel reviews all over Europe.  The objective of this project is to run various machine learning models to predict review scoring and compare which machine learning model is most accurate, create a database to store the data which will be used in our machine learning and data visualization using tableau and/or D3.js with Web application to create a fully functioning and interactive dashboard.
+The selected topic for Final Project is a "European Hotel Review Analysis". The dataset is associated with hotel reviews all over Europe. The objective of this project is to run various machine learning models to predict review scoring and compare which machine learning model is most accurate, create a database to store the data which will be used in our machine learning and create a fully functioning and interactive dashboard using tableau and showcase results on Web application.
 
 ### Reason why we selected our topic
 Based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skills associated with ETL (Extract, Transfer, and Load), machine learning models, and interactive data visualization dashboards.
@@ -36,9 +48,10 @@ The CSV file contains 17 fields. The description of each field is as below:
 ### Questions we are trying answer/ What are we trying to learn
 
 - Train and evaluate various machine learning models to determine which selected machine learning model predicts the review score with the highest accuracy.
-- What are the Top 5 hotels with the highest review score per Country?
+- What is the Avg Review Score per Country?
 - What % are positive reviews and negative reviews per Country?
 - Overtime - Did the Avg Reviews score of the Country improved or degraded?  
+- What are the Top 5 hotels with the highest review score per Country?
 - Overtime - Did the Avg Reviews score of the Top 5 Hotels per Country improved or degraded?
 - What is the Number of Reviews per Reviewer Nationality?
 - What are the Top 5 Reviewer Nationality per country?
@@ -48,11 +61,11 @@ The CSV file contains 17 fields. The description of each field is as below:
 
 
 ## Resources 
-[Website (Work in progress...)](https://jagpreetbath.github.io/European_Hotel_Analysis/index.html)
+[Website](https://jagpreetbath.github.io/European_Hotel_Analysis/index.html)
 
 [Google Slides](https://docs.google.com/presentation/d/18UyDqehfuOY-jSQNCMsIw5Z9MuEUVRClHHr3JhimY5A/edit?usp=sharing)
 
-[Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/HotelLocationMap)
+[Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/Country)
 
 [Machine Learning](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning)
 
