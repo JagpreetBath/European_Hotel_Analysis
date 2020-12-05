@@ -226,13 +226,11 @@
             </div>
           </div>
         </div>  
-
-
         <div class="row">
           <div class="col-12">
             <div class="card card-chart">
               <div class="card-header ">
-                <h4>Step 1: Processing data for Attempt 1</h4>
+                <h3>Step 1: Processing data for Attempt 1</h3>
                 <p>
                   <ul>
                     <li>Changing 'No Negative' and 'No Positive' entries under 'Negative Review' and 'Positive_Review' to null</li>
@@ -262,9 +260,17 @@
                     <li>Format of data after the changes</li>
                     <img src="assets/img/cleaned_data_using_pandas_for_NLP.png" alt="cleaned_data_using_pandas_for_NLP">
                   </ul>
-                </p><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 2: Cleaning data using PySpark in Google Colab</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 2: Cleaning data using PySpark in Google Colab</h3>
                 <p>
                   <ul>
                     <li>Finding Null, NaN, and empty strings (' ')</li>
@@ -273,10 +279,20 @@
                     <code>df.filter(df["Review"].isNull()).count()</code>
                     <li>Retaining only the rown that are not Null</li>
                     <code>df = df.where(col("Review").isNotNull())</code>
-                  </ul>
-                </p><br>
 
-                <h4>Step 3: Running NLP (1st Attempt) and observing results</h4>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 3: Running NLP (1st Attempt) and observing results</h3>
+
                 <p>
                   <ul>
                     <img src="assets/img/NLP_1_result.png" alt="NLP_1_result">
@@ -287,9 +303,17 @@
                 <p>The accuracy of the algorithm in predicting the output was 20.77%.</p>
                 <p>The reason behind this was that around 100 possibilities for reviewer_scores (0.0 to 10.0, in increments of 0.1)</p>
                 <p>Solution - Rounding up the scores to integers will decrease the possibility for the scores to 11 (0 to 10)</p>
-                <br>
 
-                <h4>Step 4: Processing data for Attempt 2</h4>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 4: Processing data for Attempt 2</h3>
                 <p>
                   <ul>
                     <li>Change the format of Reviewer_Score from FLOAT to INT</li>
@@ -297,15 +321,27 @@
                     <li>Format of data for NLP2</li>
                     <img src="assets/img/Format_of_data_for_NLP2.png" alt="Format_of_data_for_NLP2">
                   </ul>
-                </p><br>
+                  
+                </p>
+                <br>
+   
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 5: Running NLP (2nd Attempt) and observing results</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 5: Running NLP (2nd Attempt) and observing results</h3>
+
                 <p>
                   <ul>
                     <img src="assets/img/NLP_2_result.png" alt="NLP_2_results">
                   </ul>
                 </p>
-                <h5>Next Steps ...</h5>
+                <h4>Next Steps ...</h4>
 
                 <p>The accuracy of the algorithm in predicting the output was 39.62% (better than 20.77%), but still bad</p>
                 <p>The reason behind this was that around 11 possibilities for reviewer_scores (0 to 10)</p>
@@ -316,28 +352,47 @@
                   <li>Star Rating 3: Integer Scores 5-6</li>
                   <li>Star Rating 4: Integer Scores 7-8</li>
                   <li>Star Rating 5: Integer Scores 9-10</li>
-                </ul><br>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 6: Processing data for Attempt 3</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 6: Processing data for Attempt 3</h3>
                 <p>
-                <ul>
-                  <li>Converting review scores into 5 Categories</li>
-                  <code>hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] <= 2), 'Star_Rating'] = '1'
-                    <br>
-                    hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 9), 'Star_Rating'] = '5'
-                    <br> 
-                    hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 3) & (hotel_reviews['Reviewer_Score_Int'] <= 4), 'Star_Rating'] = '2'
-                    <br>
-                    hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 5) & (hotel_reviews['Reviewer_Score_Int'] <= 6), 'Star_Rating'] = '3'
-                    <br>
-                    hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 7) & (hotel_reviews['Reviewer_Score_Int'] <= 8), 'Star_Rating'] = '4'
-                  </code>
-                  <li>Format of data for NLP3</li>
-                  <img src="assets/img/Format_of_data_for_NLP2a.png" alt="Format_of_data_for_NLP3">
-                </ul>
-                </p><br>
+                  <ul>
+                    <li>Converting review scores into 5 Categories</li>
+                    <code>hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] <= 2), 'Star_Rating'] = '1'
+                      <br>
+                      hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 9), 'Star_Rating'] = '5'
+                      <br> 
+                      hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 3) & (hotel_reviews['Reviewer_Score_Int'] <= 4), 'Star_Rating'] = '2'
+                      <br>
+                      hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 5) & (hotel_reviews['Reviewer_Score_Int'] <= 6), 'Star_Rating'] = '3'
+                      <br>
+                      hotel_reviews.loc[(hotel_reviews['Reviewer_Score_Int'] >= 7) & (hotel_reviews['Reviewer_Score_Int'] <= 8), 'Star_Rating'] = '4'
+                    </code>
+                    <li>Format of data for NLP3</li>
+                    <img src="assets/img/Format_of_data_for_NLP2a.png" alt="Format_of_data_for_NLP3">
+                  </ul>
+                  
+                </p>
+                <br>
+   
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 7: Running NLP (3rd Attempt) and observing results</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 7: Running NLP (3rd Attempt) and observing results</h3>
                 <p>
                   <ul>
                     <img src="assets/img/NLP_2a_result.png" alt="NLP_3_results">
@@ -352,9 +407,18 @@
                   <li>Category 1: "Bad" - Score <= 4</li>
                   <li>Category 2: "Average" - Score 5-7</li>
                   <li>Category 3: "Good" - Score >= 8/li>
-                </ul> <br>
 
-                <h4>Step 8: Processing data for Attempt 4</h4>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 8: Processing data for Attempt 4</h3>
                 <p>
                   <ul>
                     <li>Converting review scores into 3 Categories</li>
@@ -369,16 +433,25 @@
                     </code>
                     <li>Format of data for NLP3</li>
                     <img src="assets/img/Format_of_data_for_NLP3.png" alt="Format_of_data_for_NLP4">
-                  </ul> 
-                </p><br>
+                  </ul>
+                </p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 9: Running NLP (4th Attempt) and observing results</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 9: Running NLP (4th Attempt) and observing results</h3>
                 <p>
                   <ul>
                     <img src="assets/img/NLP_3_result.png" alt="NLP_4_results">
                   </ul>
                 </p>
-                <h5>Next Steps ...</h5>
+                <h4>Next Steps ...</h4>
 
                 <p>The accuracy that we got last time was 77.64% (better than 39.62%), but still needs improvement</p>
                 <p>We will narrow down to 2 categories/sentiments - positive and negative/p>
@@ -386,30 +459,56 @@
                 <ul>
                   <li>Sentiment 1: "Positive" - Review Score <= 4.9</li>
                   <li>Category 2: "Negative" - Review Score > 5.0</li>
-                </ul><br>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
 
-              <h4>Step 10: Processing data for Attempt 5</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 10: Processing data for Attempt 5</h3>
                 <p>
                   <ul>
                     <li>Classifying reviews as positive and negative</li>
                     <code>hotel_reviews.loc[hotel_reviews["Reviewer_Score"] <= 4.9, "Reviewer_Sentiment"] = "negative"
+
+
                       <br> 
                       hotel_reviews.loc[hotel_reviews["Reviewer_Score"] >= 5.0, "Reviewer_Sentiment"] = "positive"
                     </code>
                     <li>Format of data for NLP5</li>
                     <img src="assets/img/Format_of_data_for_NLP4.png" alt="Format_of_data_for_NLP5">
-                  </ul>
-                </p><br>
+                  </ul>              
+                </p>
+                <br>  
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 11: Running NLP (5th Attempt) and observing results</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 11: Running NLP (5th Attempt) and observing results</h3>
                 <p>
                   <ul>
                     <img src="assets/img/NLP_4_result.png" alt="NLP_5_results">
                   </ul>
-                </p><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
 
-                <h4>Step 12: Running NLP: <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb"><em style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: 600;">Reading data from AWS PostgresSQL DataBase</strong></em></a></h4>
-
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <h3>Step 12: Running NLP: <a href="https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb"><em style="box-sizing: border-box;"><strong style="box-sizing: border-box; font-weight: 600;">Reading data from AWS PostgresSQL DataBase</strong></em></a></h3>
               </div>
             </div>
           </div>
