@@ -23,8 +23,6 @@ Based on previous class deliverables and group research done by the project team
 ### Data Source Description
 This dataset contains 515,000 customer reviews and a scoring of 1493 luxury hotels across Europe. The geographical location of hotels is also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
 
-[Data Link ](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
-
 #### Data Content
 The CSV file contains 17 fields. The description of each field is as below:
 - Hotel_Address: Address of the hotel.
@@ -73,35 +71,35 @@ Random Forest Classifier				|	0.787
 Easy Ensemble Classifier				|	0.795
 NLP using Pyspark					|	0.920
 NLP using Deep Learning (2 layers)				|	0.957
-|||
 
 ### Tableau Analysis 
 #### What is the Avg Review Score per Country?
-![Result1](Resources/Result1.jpg)
+
+> ![Result1](Resources/Result1.jpg)
 
 #### What % are positive reviews and negative reviews per Country?
-![Result2](Resources/Result2.jpg)
+> ![Result2](Resources/Result2.jpg)
 
 #### Overtime - Did the Avg Reviews score of the Country improved or degraded?  
-![Result3](Resources/Result3.jpg)
+> ![Result3](Resources/Result3.jpg)
 
 #### What are the Top 5 hotels with the highest review score per Country?
-![Result4](Resources/Result4.jpg)
+> ![Result4](Resources/Result4.jpg)
 
 #### Overtime - Did the Avg Reviews score of the Top 5 Hotels per Country improved or degraded?
-![Result5](Resources/Result5.jpg)
+> ![Result5](Resources/Result5.jpg)
 
 #### What is the Number of Reviews per Reviewer Nationality?
-![Result6](Resources/Result6.jpg)
+> ![Result6](Resources/Result6.jpg)
 
 #### What are the Top 5 Reviewer Nationality per country?
-![Result7](Resources/Result7.jpg)
+> ![Result7](Resources/Result7.jpg)
 
 #### What % are positive reviews and negative reviews per Top 5 Reviewer Nationality per Country?
-![Result8](Resources/Result8.jpg)
+> ![Result8](Resources/Result8.jpg)
 
 #### Based on the reviewer's nationality - What are the positive and negative Avg words count per Top 5 Hotels per country?
-![Result9](Resources/Result9.jpg)
+> ![Result9](Resources/Result9.jpg)
 
 ## Recommendations
 ### Machine Learning Models
@@ -124,13 +122,15 @@ NLP using Deep Learning (2 layers)				|	0.957
 
 [Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/Country)
 
+[Data Source](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe)
+
 [Web Application Template](https://www.creative-tim.com/new-issue/black-dashboard)
 
 [Machine Learning](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning)
 
-[Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_Schemas/DB_ERD.png)
+[Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_and_Schema/DB_ERD.png)
 
-[Database Schema](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_Schemas/DB_Schema.sql)
+[Database Schema](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_and_Schema/DB_Schema.sql)
 
 [Sample Hotel Reviews Data ](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataFiles/TransformedData/tables/sample_of_hotel_reviews.zip)
 
@@ -142,4 +142,4 @@ NLP using Deep Learning (2 layers)				|	0.957
 
 [Connection of PySpark NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
-[Connection of DeepLearning NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
+[Connection of DeepLearning NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step5_NLP_DL_Review_Pos_Neg_Format.ipynb)
