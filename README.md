@@ -67,6 +67,8 @@ The CSV file contains 17 fields. The description of each field is as below:
 
 [Tableau Workbook](https://public.tableau.com/profile/jagpreet.bath#!/vizhome/European_Hotel_Analysis/Country)
 
+[Web Application Template](https://www.creative-tim.com/new-issue/black-dashboard)
+
 [Machine Learning](https://github.com/JagpreetBath/European_Hotel_Analysis/tree/main/MachineLearning)
 
 [Entity Relationship Diagram](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/ERD_Schemas/DB_ERD.png)
@@ -81,6 +83,6 @@ The CSV file contains 17 fields. The description of each field is as below:
 
 [PostgreSQL Table (Hotel Reviews) Image](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/DataBase/PostgresSQL/Sample_hotel_reviews.png)
 
-[Connection of PySpark NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step10_Final_PySpark_NLP_reading_from_RDS.ipynb)
+[Connection of PySpark NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_PySpark/Step12_Final_PySpark_NLP_reading_from_RDS.ipynb)
 
 [Connection of DeepLearning NLP ML model to the database](https://github.com/JagpreetBath/European_Hotel_Analysis/blob/main/MachineLearning/ML_NLP_DeepLearning/Step4_NLP_DL_Review_Pos_Neg_Format.ipynb)
