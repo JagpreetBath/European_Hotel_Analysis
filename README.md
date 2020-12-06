@@ -68,31 +68,56 @@ NLP using Deep Learning (2 layers)				|	0.957
 
 ### Tableau Analysis 
 #### What is the Avg Review Score per Country?
+Average Review Score per Country
+- España/Spain and Österreich/Austria have the highest Average Review Score 
 
 > ![Result1](Resources/Result1.jpg)
 
 #### What % are positive reviews and negative reviews per Country?
+Percentage of positive and negative reviews per Country
+- Negative reviews <= 4.9
+- Positive reviews >= 5.0
+- Negative reviews are  less than 5% for all countries 
+
 > ![Result2](Resources/Result2.jpg)
 
-#### Overtime - Did the Avg Reviews score of the Country improved or degraded?  
+#### Overtime - Did the Avg Reviews score of the Country improved or degraded? 
+An average Review score of the countries for hotels overtime
+
 > ![Result3](Resources/Result3.jpg)
 
 #### What are the Top 5 hotels with the highest review score per Country?
+Top 5 Hotels per Country based on the Average Review Score
+
 > ![Result4](Resources/Result4.jpg)
 
 #### Overtime - Did the Avg Reviews score of the Top 5 Hotels per Country improved or degraded?
+An average Review score of Top 5 Hotels per Country overtime
+
 > ![Result5](Resources/Result5.jpg)
 
 #### What is the Number of Reviews per Reviewer Nationality?
+Number of Reviews per Reviewer Nationality
+- United Kingdom provided the highest Number of Reviews 
+
 > ![Result6](Resources/Result6.jpg)
 
 #### What are the Top 5 Reviewer Nationality per country?
+Top 5 Reviewer Nationality per Country where hotels are located based on the Number of Reviews
+
 > ![Result7](Resources/Result7.jpg)
 
 #### What % are positive reviews and negative reviews per Top 5 Reviewer Nationality per Country?
+Percentage of positive and negative reviews for Top 5 Reviewer Nationality per Country where hotels are located
+- Negative reviews <= 4.9
+- Positive reviews >= 5.0
+- Negative reviews are  less than 10.5% for all countries 
+
 > ![Result8](Resources/Result8.jpg)
 
 #### Based on the reviewer's nationality - What are the positive and negative Avg words count per Top 5 Hotels per country?
+Top 5 Hotels per country with Avgerage Positive and Avgerage negative word count based on Reviewer Nationality.
+
 > ![Result9](Resources/Result9.jpg)
 
 ## Recommendations
@@ -108,6 +133,12 @@ NLP using Deep Learning (2 layers)				|	0.957
 4. Nederland/Netherlands: Waldorf Astoria Amsterdam
 5. Österreich/Austria: Hotel Sacher Wien
 6. United Kingdom: 41
+
+## Future Analysis
+- Performing Cluster Centroid Undersampling in addition to Random Undersampling would have provided more comparison prediction data.
+- Due to time constraints, we not able to run a K-Means model for comparison. Comparing supervised with unsupervised machine learning models would have been beneficial.
+- If we had more time, we would have liked to do visual analytics using javascript. 
+- If we had more time, we would have created a website that would give real-time visual suggestions to users. Every time a  user entered information related to his hotel stay (Name of Hotel, Check-in date, Check-out date, City, Country, review, etc..), the information would be pushed to AWS where the saved DL NLP model would be used to predict the sentiment of the review. The result would be displayed on the webpage. Also, the result will be added as a row to the Master database, which means the database would be dynamic (and not static as it is now). We would also like to run real-time Visual analytics using the updated Master database so that a user could review updated hotel analysis every time.
 
 ## Resources 
 [Website](https://jagpreetbath.github.io/European_Hotel_Analysis/index.html)
