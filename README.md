@@ -1,12 +1,12 @@
 # European Hotel Analysis
 
 ## Project Overview
-Sally wants to go on vacation. She is thinking about where to go and which hotel should she choose to stay? What are her options? 
+Sally wants to go on vacation. She is considering where to go and which hotel to stay. What are her options? 
 1. Choose randomly 
 2. Choose based on experience or recommendation of friends and family 
 3. Choose based on Hours of Research
 
-The topic we select for our Final Project is a "European Hotel Review Analysis". The objective of our project is to create a web application that can be used by the consumer to find hotels faster and easily, and hotel management can use to improve their performance. Here are the steps that will allow us to achieve our goal: 
+The topic selected for our Final Project was "European Hotel Review Analysis". The objective of our project was to create a web application that can be used by users to find hotels faster. Hotel management can also use this web application to improve its performance. Here are the steps that will allow us to achieve our goal: 
 1. Create a database and host it on AWS.
 2. Run various machine learning models to predict review scoring and compare which machine learning model is most accurate.
 3. Create a fully functioning and interactive dashboard using tableau.
