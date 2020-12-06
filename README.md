@@ -14,12 +14,6 @@ The topic we select for our Final Project is a "European Hotel Review Analysis".
 
 Lastly, based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skills associated with ETL (Extract, Transfer, and Load), machine learning models, and data visualization.
 
-### Selected Topic
-The selected topic for Final Project is a "European Hotel Review Analysis". The dataset is associated with hotel reviews all over Europe. The objective of this project is to run various machine learning models to predict review scoring and compare which machine learning model is most accurate, create a database to store the data which will be used in our machine learning and create a fully functioning and interactive dashboard using tableau and showcase results on Web application.
-
-### Reason why we selected our topic
-Based on previous class deliverables and group research done by the project team, the dataset presents the best opportunity to showcase skills associated with ETL (Extract, Transfer, and Load), machine learning models, and interactive data visualization dashboards.
-
 ### Data Source Description
 This dataset contains 515,000 customer reviews and a scoring of 1493 luxury hotels across Europe. The geographical location of hotels is also provided. The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. 
 
